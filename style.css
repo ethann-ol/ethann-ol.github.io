@@ -1,0 +1,20 @@
+*{
+    background-color: gray;
+}
+
+header{
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+}
+
+.link-redirection, .link-redirection li{
+    display: flex;
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+    
+}
+
