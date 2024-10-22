@@ -1,11 +1,13 @@
 
 const date = new  Date();
-const hour = date.getHour;
+let hour = date.getHours();
 
 commoditer = document.querySelector("h1")
 
-if (hour > 6 && hour < 20){
-    commoditer.textContent = "Bonjour";
-}else{
-    commoditer.textContent = "Bonsoir";
+if (hour > 6 && hour < 18){
+    commoditer.textContent = "Bonjour, goodmorning";
+}
+else
+{
+    commoditer.textContent = "Bonsoir, goodevening";
 }
