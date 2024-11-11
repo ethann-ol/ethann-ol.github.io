@@ -6,9 +6,36 @@ header{
     text-align: center;
 }
 
+h1{
+    font-size: 50px;
+}
+h2{
+    font-size: 40px;
+}
+.projets p{
+    font-size: 25px;
+    padding: 5px;
+    max-width: 50vw;
+}
+
+
+div.projet{
+    display: flex;
+}
+
 footer{
     text-align: center;
 }
+
+.projet img{
+    width: 40vw;
+    height: fit-content;
+    min-width: 200px;
+    border-radius: 5px;
+    transition: ease 0.5s;
+    flex: auto;
+}
+
 
 .link-redirection, .link-redirection li{
     display: flex;

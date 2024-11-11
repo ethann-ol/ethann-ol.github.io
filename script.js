@@ -1,4 +1,11 @@
 
+function create(tag, container, text=null){
+    let element = document.createElement(tag)
+    if (text)
+        element.innerText = text
+    container.appendChild(element)
+    return element
+}
 const date = new  Date();
 let hour = date.getHours();
 
@@ -11,3 +18,11 @@ else
 {
     commoditer.textContent = "Bonsoir, goodEvening";
 }
+
+
+
+
+
+
+
+
