@@ -1,0 +1,107 @@
+{
+    "fr": {
+        "title": "Portfolio",
+        "header": {
+            "languageLabel": "Choisissez la langue:",
+            "welcome": "Bienvenue sur mon portfolio"
+        },
+        "projects": [
+            {
+                "title": "Hunter",
+                "description": "Hunter est un jeu réalisé avec Unity. Nous étions une équipe de trois, et nous avons créé un jeu où le but est d'éliminer un maximum de monstres."
+            },
+            {
+                "title": "Starboundlegacy",
+                "description": "Starboundlegacy est un jeu qui a été réalisé en deux semaines à deux dans le cadre d'une SAE de premier de mon BUT informatique."
+            }
+        ],
+        "footer": {
+            "github": "Mon GitHub",
+            "linkedin": "Mon LinkedIn"
+        }
+    },
+    "en": {
+        "title": "Portfolio",
+        "header": {
+            "languageLabel": "Choose Language:",
+            "welcome": "Welcome to my portfolio"
+        },
+        "projects": [
+            {
+                "title": "Hunter",
+                "description": "Hunter is a game made with Unity. We were a team of three, and we created a game where the goal is to eliminate as many monsters as possible."
+            },
+            {
+                "title": "Starboundlegacy",
+                "description": "Starboundlegacy is a game that was created in two weeks by two people as part of a project for my computer science degree."
+            }
+        ],
+        "footer": {
+            "github": "My GitHub",
+            "linkedin": "My LinkedIn"
+        }
+    },
+    "de": {
+        "title": "Portfolio",
+        "header": {
+            "languageLabel": "Sprache wählen:",
+            "welcome": "Willkommen in meinem Portfolio"
+        },
+        "projects": [
+            {
+                "title": "Hunter",
+                "description": "Hunter ist ein Spiel, das mit Unity erstellt wurde. Wir waren ein Team von drei und haben ein Spiel entwickelt, bei dem das Ziel darin besteht, so viele Monster wie möglich zu eliminieren."
+            },
+            {
+                "title": "Starboundlegacy",
+                "description": "Starboundlegacy ist ein Spiel, das in zwei Wochen von zwei Personen im Rahmen eines Projekts für meinen Informatikabschluss erstellt wurde."
+            }
+        ],
+        "footer": {
+            "github": "Mein GitHub",
+            "linkedin": "Mein LinkedIn"
+        }
+    },
+    "it": {
+        "title": "Portfolio",
+        "header": {
+            "languageLabel": "Scegli la lingua:",
+            "welcome": "Benvenuto nel mio portfolio"
+        },
+        "projects": [
+            {
+                "title": "Hunter",
+                "description": "Hunter è un gioco realizzato con Unity. Eravamo un team di tre e abbiamo creato un gioco in cui l'obiettivo è eliminare il maggior numero possibile di mostri."
+            },
+            {
+                "title": "Starboundlegacy",
+                "description": "Starboundlegacy è un gioco che è stato realizzato in due settimane da due persone come parte di un progetto per il mio diploma in informatica."
+            }
+        ],
+        "footer": {
+            "github": "Il mio GitHub",
+            "linkedin": "Il mio LinkedIn"
+        }
+    },
+    "es": {
+        "title": "Portafolio",
+        "header": {
+            "languageLabel": "Elige el idioma:",
+            "welcome": "Bienvenido a mi portafolio"
+        },
+        "projects": [
+            {
+                "title": "Hunter",
+                "description": "Hunter es un juego realizado con Unity. Éramos un equipo de tres y creamos un juego donde el objetivo es eliminar la mayor cantidad posible de monstruos."
+            },
+            {
+                "title": "Starboundlegacy",
+                "description": "Starboundlegacy es un juego que fue creado en dos semanas por dos personas como parte de un proyecto para mi título en informática."
+            }
+        ],
+        "footer": {
+            "github": "Mi GitHub",
+            "linkedin": "Mi LinkedIn"
+        }
+    }
+}

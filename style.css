@@ -56,3 +56,16 @@ img:hover{
     
 }
 
+.language-selector {
+    margin-top: 20px; /* Espacement au-dessus du sélecteur */
+}
+
+.language-selector label {
+    margin-right: 10px; /* Espacement entre le label et le sélecteur */
+}
+
+.language-selector select {
+    padding: 5px; /* Espacement interne du sélecteur */
+    font-size: 16px; /* Taille de la police */
+}
+

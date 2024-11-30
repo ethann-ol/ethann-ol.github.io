@@ -10,6 +10,16 @@
 <body>
     <header>
         <h1></h1>
+        <div class="language-selector">
+            <label for="language">Choisissez la langue:</label>
+            <select id="language" onchange="changeLanguage()">
+                <option value="fr">Français</option>
+                <option value="en">English</option>
+                <option value="de">Deutsch</option>
+                <option value="it">Italiano</option>
+                <option value="es">Español</option>
+            </select>
+        </div>
     </header>
     <section class="projets">
         <article>
@@ -17,9 +27,6 @@
                 Hunter
             </h2>
             <div class="projet">
-                <p>
-                    Hunter un jeu realiser avec Unity. Nous étions une équipe de trois, nous avons créer un jeux ou le but est d'éliminer un maximum de monstre. Chaque monstre vous rapporte des points d'experience. Deux armes sont mises à votre disposition, un pistolet laser qui tire a courte portée et rapidement mais fait peut de dégats, et un fusil de précision qui tire de loin et fait de gros dégats mais (met) longtemps à se recharger. La carte a été réaliser par nos soins grâce au asset d'Unity. Les armes et les monstres on été réaliser sur Blender et les sons réaliser par nous-même. 
-                </p>
             <p>
                 En équipe de trois, nous avons créer un jeu d'élimination de monstres. Ce jeu a été réalisé avec le moteur de jeu UNITY. La carte a été réalisée par nos soins grace au asset d'Unity. Les armes et monstres sur Blender. Les sons par nous-même.
             </p>
@@ -66,10 +73,10 @@
         <div>
             <ul class="link-redirection">
                 <li>
-                    <a href="https://github.com/ethann-ol"><box-icon type='logo' name='github'></box-icon></a>
+                    <a href="https://github.com/ethann-ol" title="github"><box-icon type='logo' name='github'></box-icon></a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/ethann-cochenet-5211a4206/"><box-icon name='linkedin-square' type='logo' ></box-icon></a>
+                    <a href="https://www.linkedin.com/in/ethann-cochenet-5211a4206/" title="linkedin"><box-icon name='linkedin-square' type='logo' ></box-icon></a>
                 </li>
             </ul>
         </div>
@@ -77,5 +84,32 @@
 
 
     <script src="script.js" defer></script>
+    <script>
+        function changeLanguage() {
+            const language = document.getElementById('language').value;
+    
+            // Ici, vous pouvez ajouter la logique pour charger les traductions
+            // Pour cet exemple, nous allons simplement afficher un message
+            switch (language) {
+                case 'fr':
+                    alert('Vous avez sélectionné le Français.');
+                    break;
+                case 'en':
+                    alert('You have selected English.');
+                    break;
+                case 'de':
+                    alert('Sie haben Deutsch ausgewählt.');
+                    break;
+                case 'it':
+                    alert('Hai selezionato Italiano.');
+                    break;
+                case 'es':
+                    alert('Has seleccionado Español.');
+                    break;
+                default:
+                    alert('Langue non reconnue.');
+            }
+        }
+    </script>
 </body>
 </html>
