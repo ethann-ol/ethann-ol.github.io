@@ -10,16 +10,6 @@
 <body>
     <header>
         <h1></h1>
-        <div class="language-selector">
-            <label for="language">Choisissez la langue:</label>
-            <select id="language" onchange="changeLanguage()">
-                <option value="fr">Français</option>
-                <option value="en">English</option>
-                <option value="de">Deutsch</option>
-                <option value="it">Italiano</option>
-                <option value="es">Español</option>
-            </select>
-        </div>
     </header>
     <section class="projets">
         <article>
@@ -28,21 +18,17 @@
             </h2>
             <div class="projet">
             <p>
-                En équipe de trois, nous avons créé un jeu d'élimination de monstres. Ce jeu a été réalisé avec le moteur de jeu UNITY. La carte a été réalisée par nos soins grâce aux assets d'Unity. Les armes et monstres sur Blender. Les sons par nous-même.
-            </p>
-            <p>
+                En équipe de trois, nous avons créé un jeu d'élimination de monstres. Ce jeu a été réalisé avec le moteur de jeu UNITY. La carte a été réalisée par nos soins grâce aux assets d'Unity. Les armes et monstres sur Blender. Les sons par nous-même.<br>
                 Le but : tuer le maximum de monstres.<br>
-                
                 Le principe du jeu : Tuer des monstres pour gagner des points d'expérience.<br>
-                
-                Les moyens : 
-                <ul>
+                Les moyens : <ul>
                     <li>1 pistolet laser : tir à courte portée, rapide. Fait peu de dégats.</li>
                     <li>
                         1 fusil de précision : tir de loin, lent. Fait de gros dégats
                     </li>
                 </ul>
             </p>
+            </div>
         </div>
         </article>
         <article >
@@ -60,8 +46,7 @@
                     des coeur suplementaire.
                 </p>
                 <p>
-                    Voici le lien vers le github de 
-                    <a href="https://github.com/HonoreBessonMagdelain/StarBound_Legacy">StatboundLegacy</a>
+                    Voici le lien vers le github de <a href="https://github.com/HonoreBessonMagdelain/StarBound_Legacy">StatboundLegacy</a>
                 </p>
                 <div class="img-container">
                     <img src="images/starboundlegacy.png">
@@ -73,10 +58,10 @@
         <div>
             <ul class="link-redirection">
                 <li>
-                    <a href="https://github.com/ethann-ol" title="github"><box-icon type='logo' name='github'></box-icon></a>
+                    <a href="https://github.com/ethann-ol"><box-icon type='logo' name='github' color="#ffffff"></box-icon></a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/ethann-cochenet-5211a4206/" title="linkedin"><box-icon name='linkedin-square' type='logo' ></box-icon></a>
+                    <a href="https://www.linkedin.com/in/ethann-cochenet-5211a4206/"><box-icon name='linkedin-square' type='logo' color="#ffffff"></box-icon></a>
                 </li>
             </ul>
         </div>
@@ -84,32 +69,5 @@
 
 
     <script src="script.js" defer></script>
-    <script>
-        function changeLanguage() {
-            const language = document.getElementById('language').value;
-    
-            // Ici, vous pouvez ajouter la logique pour charger les traductions
-            // Pour cet exemple, nous allons simplement afficher un message
-            switch (language) {
-                case 'fr':
-                    alert('Vous avez sélectionné le Français.');
-                    break;
-                case 'en':
-                    alert('You have selected English.');
-                    break;
-                case 'de':
-                    alert('Sie haben Deutsch ausgewählt.');
-                    break;
-                case 'it':
-                    alert('Hai selezionato Italiano.');
-                    break;
-                case 'es':
-                    alert('Has seleccionado Español.');
-                    break;
-                default:
-                    alert('Langue non reconnue.');
-            }
-        }
-    </script>
 </body>
 </html>
