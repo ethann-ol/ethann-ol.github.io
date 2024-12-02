@@ -17,11 +17,11 @@ a{
 p {
     position: relative; /* Position text for the cursor effect */
     display: inline-block; /* Ensure text is inline-block for better effect */
-    transition: color 0.3s ease; /* Smooth color transition */
+    transition: color 1s ease; /* Smooth color transition */
     margin: 5px;
 }
 
-p:hover, h1:hover {
+p:hover, h2:hover, li:hover, h1:hover {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
