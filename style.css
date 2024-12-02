@@ -32,10 +32,18 @@ header{
 h1{
     font-size: 50px;
     margin: 5px;
+     position: relative; /* Position text for the cursor effect */
+    display: inline-block; /* Ensure text is inline-block for better effect */
 }
 h2{
     font-size: 40px;
     margin: 5px;
+     position: relative; /* Position text for the cursor effect */
+    display: inline-block; /* Ensure text is inline-block for better effect */
+}
+li{
+     position: relative; /* Position text for the cursor effect */
+    display: inline-block; /* Ensure text is inline-block for better effect */
 }
 
 .projet{
