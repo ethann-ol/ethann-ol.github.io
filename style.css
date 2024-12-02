@@ -55,6 +55,7 @@ footer{
 
 img{
     width: 20vw;
+    min-width: 200px;
     height: auto;
     transition: ease 0.5s;
     margin: 5px;
