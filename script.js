@@ -12,10 +12,6 @@ const html = document.querySelector('html')
 let language = html.lang 
 console.log(language)
  
-// setInterval(function(){
-//     language = html.lang 
-
-// },10)
 
 commoditer = document.querySelector("h1")
 

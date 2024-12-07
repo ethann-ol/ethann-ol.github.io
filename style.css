@@ -51,7 +51,7 @@ ul#contact-list{
     display: flex;
     overflow-y: hidden;
     height: fit-content;
-    padding: 10px;
+    padding: 20px;
     justify-content: left;
 }
 
@@ -118,6 +118,7 @@ a {
     padding: 0;
     margin: 0;
     text-decoration: none;
+    box-shadow: 0 0 10px indigo, 0 0 5px indigo;
 }
 
 ul {
@@ -125,7 +126,7 @@ ul {
 }
 
 li {
-    padding: 5px;
+    padding: 10px;
 }
 
 p {
@@ -137,6 +138,22 @@ p {
 
 a:hover {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.bt-lang{
+    background: indigo;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: large;
+    width: 100%;
+    border: none;
+    box-shadow: 0 0 10px indigo, 0 0 5px indigo;
+    transition: 0.3s ease;
+}
+.bt-lang:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+    background-color: darkviolet;
+    transition: 0.3s ease;
 }
 
 header {
@@ -154,10 +171,22 @@ h1 {
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 30px;
     margin: 20px;
     position: relative;
     display: inline;
+}
+
+h3{
+    font-size: 20px;
+    margin: 20px;
+    width: 100%;
+    display: inline;
+}
+
+.low-mar-pad{
+    margin: 5px 20px 5px 20px;
+    padding: 5px;
 }
 
 .neon-border {
@@ -294,6 +323,8 @@ a, .sidebar a {
 a:hover, .sidebar a:hover {
     background-color: darkviolet;
 }
+
+
 
 .sidebar ul li a {
     font-size: 18px;

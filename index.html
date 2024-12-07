@@ -14,122 +14,163 @@
     </header>
     
     <section class="sidebar">
+        <nav>
         <h3>Vous etes perdu ?</h3>
-        <ul>
-            <li><a href="#me">A propos de moi</a></li>
-            <li><a href="#experience"></a></li>
-            <li><a  href="#school-projects">Mes projet scolaire</a>
-            <li><a href="#uber">Uber</a></li>
-            <li><a href="#hunter">Hunter</a></li>
-            <li><a href="#starboundlegacy">Starboundlegacy</a></li>
-            </li>
-            <li><a href="#personal-projects">Mes projets personel</a>
-            <li><a href="#dragonSlayer">Dragon Slayer</a></li>
-            </li>
-        </ul>
-        <h3>
-            <li><button id="fr">Francais</button></li>
-            <li><button id="en">English</button></li>
-        </h3>
+            <ul>
+                <li><a href="#me">A propos de moi</a></li>
+                <!-- <li><a href="#experience">Experiences</a></li> -->
+                <li><a  href="#school-projects">Mes projet scolaire</a>
+                    <li><a href="#uber">Uber</a></li>
+                    <li><a href="#hunter">Hunter</a></li>
+                    <li><a href="#starboundlegacy">Starboundlegacy</a></li>
+                </li>
+                <li><a href="#personal-projects">Mes projets personel</a>
+                    <li><a href="#dragonSlayer">Dragon Slayer</a></li>
+                </li>
+                <li><a href="#contact"> contact</a></li>
+            </ul>
+            <h3>Langue</h3>
+            <ul>
+                <li><button class="bt-lang" id="fr">Francais</button></li>
+                <li><button class="bt-lang" id="en">English</button></li>
+            </ul>
 
-        <h3 id="#contact">Contact</h3>
-        
-        
-        <ul>
-            <li>
-                <a href="CV_COCHENET_Ethann.pdf" target="_blank">Voir mon CV</a><br>
-            </li>
-            <li>
-                <a href="CV_COCHENET_Ethann.pdf" download="">Telecharger mon CV</a>
-            </li>
-        </ul>
+        </nav>
+
     </section>
 
     <section class="content">
         <article>
-            <h2 id="me">A propos de moi</h2>
-            <div class="neon-border">
-                <p>
-                    Je suis un etudiant en deuxieme annee de BUT Informatique parcours 
-                    Realisation d'application : conception, developpement et VALIDATION
-                    Actuellememt a la recherche d'un stage. Je sais utiliser python
-                    pour realiser des application ou des jeux simple, mais je suis aussi capable
-                    d'utiliser le c# afin de produire des application plus complexe et des jeux 2D comme 3D.
-                </p>
-                <ul class="link-redirection" id="contact-list">
-                    <li>
-                        <a href="https://github.com/ethann-ol">Github</a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/ethann-cochenet-5211a4206/">LinkedIn</a>
-                    </li>
-                    <li>
-                        <a href="mailto:ethann.cochenet@gmail.com">Mail perso</a>
-                    </li>
-                    <li>
-                        <a href="mailto:ethann.cochenet@etu.univ-smv.fr">Mail universitaire</a>
-                    </li>
-                </ul>
+                <h2 id="me">A propos de moi</h2>
+                <div class="neon-border">
+                    <div>
+                        <p>
+                            Je suis un etudiant en deuxieme annee de BUT Informatique parcours 
+                            Realisation d'application : conception, developpement et VALIDATION
+                            Actuellememt a la recherche d'un stage. Je sais utiliser python
+                            pour realiser des application ou des jeux simple, mais je suis aussi capable
+                            d'utiliser le c# afin de produire des application plus complexe et des jeux 2D comme 3D.
+                        </p>
 
-            </div>
-        </article>
-        <article id="school-projects">
-            <h2 id="uber">Uber</h2>
-            <div class="neon-border">
-                <p>Nous avons pour projet de realiser une copie du site Uber en developpement agile. Pour cela nous utilisons Laravel pour la partie web.
-                    Nous devons aussi concevoir la base de donnee en respectant le RGPD. Pour cela nous utilisons le SQL afin de 
-                    creer nos table, contrainte et index.<br>
-                    Le but : reproduire les services Uber, uberEats et UberVelo. Comprendre comment fonctionne la methode Agile<br>
-                </p>
-                <div class="img-container">
+                    </div>
+                    <div id="contact">
+
+                        <ul class="link-redirection" id="contact-list">
+                            <li>
+                                <a href="https://github.com/ethann-ol">Github</a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/ethann-cochenet-5211a4206/">LinkedIn</a>
+                            </li>
+                            <li>
+                                <a href="mailto:ethann.cochenet@gmail.com">Mail perso</a>
+                            </li>
+                            <li>
+                                <a href="mailto:ethann.cochenet@etu.univ-smv.fr">Mail universitaire</a>
+                            </li>
+                            <li>
+                                <a href="CV_COCHENET_Ethann.pdf" target="_blank">Voir mon CV</a><br>
+                            </li>
+                            <li>
+                                <a href="CV_COCHENET_Ethann.pdf" download="">Telecharger mon CV</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- <h3 id="experience">Experiences</h3><br>
+                    <p class="low-mar-pad">
+                        Adecco-Savoie Moulage<br>
+                        Opérateur-Conditionneur<br>
+                        Cluses<br>
+                        Juillet 2024 - Aout 2024 (2 mois) et Juin 2023-Aout 2023 (3 mois)
+                        <br>
+                        Mission :
+                        <ul class="low-mar-pad">
+                        <li>Insertion dans une machine</li>
+                        <li>Conditionner des petites pièces</li>
+                        </ul>
+                        </p><br>
+                    <p class="low-mar-pad">Au coin du four<br>
+                        Vendeur<br>
+                        Cluses<br>
+                        Juillet 2022 - Septembre 2022<br>
+                        Mission :
+                        <ul>
+                            <li>Vente des produits</li>
+                            <li>Cuisson des produits</li>
+                        </ul> -->
+
 
                 </div>
+            </article>
+            <article id="school-projects">
+                <div>
+                
+                    <h2 id="uber">Uber</h2>
+                    <div class="neon-border">
+                        <p>Nous avons pour projet de realiser une copie du site Uber en developpement agile. Pour cela nous utilisons Laravel pour la partie web.
+                        Nous devons aussi concevoir la base de donnee en respectant le RGPD. Pour cela nous utilisons le SQL afin de 
+                        creer nos table, contrainte et index.<br>
+                        Le but : reproduire les services Uber, uberEats et UberVelo. Comprendre comment fonctionne la methode Agile<br>
+                        </p>
+                    <div class="img-container">
+                </div>
             </div>
-            <h2 id="hunter">
-                Hunter
-            </h2>
-            <div class="neon-border">
-            <p>
-                En équipe de trois, nous avons créé un jeu d'élimination de monstres. Ce jeu a été réalisé avec le moteur de jeu UNITY. La carte a été réalisée par nos soins grâce aux assets d'Unity. Les armes et monstres sur Blender. Les sons par nous-même.<br>
-                Le but : tuer le maximum de monstres.<br>
-                Le principe du jeu : Tuer des monstres pour gagner des points d'expérience.<br>
-                Les moyens :
-            </p>
-            <ul class="vertical-ul">
-               <li>1 pistolet laser : tir à courte portée, rapide. Fait peu de dégats.</li>
-               <li>1 fusil de précision : tir de loin, lent. Fait de gros dégats</li>
-           </ul>
-           <div class="img-container">
+                
+            <div>
+
+                <h2 id="hunter">
+                    Hunter
+                </h2>
+                <div class="neon-border">
+                    <p>
+                        En équipe de trois, nous avons créé un jeu d'élimination de monstres. Ce jeu a été réalisé avec le moteur de jeu UNITY. La carte a été réalisée par nos soins grâce aux assets d'Unity. Les armes et monstres sur Blender. Les sons par nous-même.<br>
+                        Le but : tuer le maximum de monstres.<br>
+                        Le principe du jeu : Tuer des monstres pour gagner des points d'expérience.<br>
+                        Les moyens :
+                    </p>
+                    <ul class="vertical-ul">
+                        <li>1 pistolet laser : tir à courte portée, rapide. Fait peu de dégats.</li>
+                        <li>1 fusil de précision : tir de loin, lent. Fait de gros dégats</li>
+                    </ul>
+                    <div class="img-container">
+                    </div>
+                </div>
             </div>
-            </div>
-            <h2 id="starboundlegacy">
-                Starboundlegacy
-            </h2>
-            <div class="neon-border">
-                <p>
-                    En première année de mon BUT Informatique, dans le cadre d'une SAE, en groupe de deux, nous avons
-réalisé ce jeu en deux semaines.
-Nous avons utilisé WPF et le langage C#.<br>
-Le but : Eliminer tous les obstacles devant vous.<br>
-Le principe du jeu : Eviter tout asteroide ou enemis qui vous foncent dessus par tous les moyens à
-votre disposition. Mais attention, les asteroïdes sont indéstructible avec vos
-projectiles.<br>
-Les moyens : Plusieurs bonus consommables. Pour obtenir ces bonus il faudra passer par le magasin
-                </p>
-                <ul>
-                    <li>- un bouclier qui vous rend invincible et qui rapporte des points.</li>
-                    <li>- un kit de soins qui remets votre vie à 100%.</li>
-                    <li>- une bombe nucléaire qui réduit tout en cendre.</li>
-                </ul>
-                <p>
-                    Voici le lien vers le github <a href="https://github.com/HonoreBessonMagdelain/StarBound_Legacy">StatboundLegacy</a>
-                </p>
-                <div class="img-container">
-                    <img src="images/starboundlegacy.png">
+            <div>
+
+                <h2 id="starboundlegacy">
+                    Starboundlegacy
+                </h2>
+                <div class="neon-border">
+                    <p>
+                        En première année de mon BUT Informatique, dans le cadre d'une SAE, en groupe de deux, nous avons
+                        réalisé ce jeu en deux semaines.
+                        Nous avons utilisé WPF et le langage C#.<br>
+                        Le but : Eliminer tous les obstacles devant vous.<br>
+                        Le principe du jeu : Eviter tout asteroide ou enemis qui vous foncent dessus par tous les moyens à
+                        votre disposition. Mais attention, les asteroïdes sont indéstructible avec vos
+                        projectiles.<br>
+                        Le magasin : la monnaie est votre score. Vous y trouverez aussi de nouvelles armes et des coeurs
+                                            suplémentaires.<br>
+                        Les moyens : Plusieurs bonus consommables. Pour obtenir ces bonus il faudra passer par le magasin
+                    </p>
+                    <ul>
+                        <li>- un bouclier qui vous rend invincible et qui rapporte des points.</li>
+                        <li>- un kit de soins qui remets votre vie à 100%.</li>
+                        <li>- une bombe nucléaire qui réduit tout en cendre.</li>
+                    </ul>
+                    <p>
+                        Voici le lien vers le github <a href="https://github.com/HonoreBessonMagdelain/StarBound_Legacy">StatboundLegacy</a>
+                    </p>
+                    <div class="img-container">
+                        <img src="images/starboundlegacy.png">
+                    </div>
                 </div>
             </div>
         </article>
         <article id="personal-projects">
+            <div>
+
                 <h2 id="dragonSlayer">Dragon Slayer</h2>
                 <div class="neon-border">
                     <p>Dragon Slayer est un jeu qui se joue seul. Il est en cours de realisation avec python et la librairie graphique
@@ -145,9 +186,10 @@ Les moyens : Plusieurs bonus consommables. Pour obtenir ces bonus il faudra pass
                         <li>equiper des objets</li>
                     </ul>
                     <div class="img-container">
-
+                        
                     </div>
                 </div>
+            </div>
         </article>
     </section>
 
