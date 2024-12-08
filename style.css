@@ -140,6 +140,105 @@ a:hover {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
+.programming-lang{
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+.program-skill{
+    margin: 10px;
+    border: solid indigo 5px;    
+    box-shadow: 0 0 10px indigo, 0 0 5px indigo;
+    display: flex;
+    padding: 5px;
+}
+
+.level-bar{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    padding: 0px;
+    margin: 0px;
+    background-color: indigo;
+    box-shadow: 0 0 10px indigo, 0 0 5px indigo;
+    height: 10px;
+    width: 100%;
+}
+
+.level-bar div{
+    background-color: indianred;
+    box-shadow: 0 0 5px indianred, 0 0 2.5px indianred;
+}
+
+.justify-lang{
+    justify-content: center;
+    text-align: center;
+    border: solid indigo 5px;    
+    box-shadow: 0 0 10px indigo, 0 0 5px indigo;
+    padding: 10px;
+
+}
+
+#unity{
+    width: 80%;
+}
+
+#csharp{
+    width: 100%;
+}
+
+#html{
+    width: 50%;
+}
+
+#css{
+    width: 50%;
+}
+
+#js{
+    width: 70%;
+}
+
+#postgresql{
+    width: 80%;
+}
+
+#python{
+    width: 100%;
+}
+
+#php{
+    width: 90%;
+}
+
+#windows{
+    width: 60%;
+}
+
+#francais{
+    width: 100%;
+}
+
+#anglais{
+    width: 70%;
+}
+
+box-icon{
+    width: 75px;
+    height: 75px;
+}
+
+.speaked-lang{
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+
+
 .bt-lang{
     background: indigo;
     padding: 10px;
@@ -199,7 +298,6 @@ h3{
     overflow-x: auto;
     white-space: nowrap;
     padding: 10px;
-    justify-content: center;
 }
 
 .sidebar-toggle-btn {

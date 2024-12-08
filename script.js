@@ -65,8 +65,8 @@ links.forEach(link => {
 });
 
 document.querySelector("#en").addEventListener("click", () => {
-    window.location.href = "indexEn.html";
+    window.location.href = "index.html";
 })
 document.querySelector("#fr").addEventListener("click", () => {
-    window.location.href = "index.html";
+    window.location.href = "indexFR.html";
 })
