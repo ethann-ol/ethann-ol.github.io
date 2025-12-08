@@ -1,4 +1,11 @@
 <script setup>
+import { ref } from 'vue'
+
+const expandedUE = ref(null)
+
+const toggleUE = (ueId) => {
+  expandedUE.value = expandedUE.value === ueId ? null : ueId
+}
 </script>
 
 <template>
@@ -10,7 +17,6 @@
       <header class="pt-12 pb-8 max-w-6xl mx-auto px-6 flex flex-col items-center">
         <h1 class="text-4xl font-bold text-white mb-2">Mes Compétences</h1>
         <p class="text-indigo-300 text-lg mb-4">Compétences acquises durant le BUT Informatique — Parcours A (Semestre 5)</p>
-        <!-- Lien de retour retiré, navigation globale dans le header -->
       </header>
 
       <main class="max-w-6xl mx-auto px-6 py-12">
@@ -18,129 +24,214 @@
         <section class="mb-12">
           <h2 class="text-3xl font-bold text-white mb-12 text-center">Compétences (UE - Référentiel PN)</h2>
 
-          <p class="text-slate-300 text-center mb-8">J'ai organisé les compétences en 6 UE (Unités d'Enseignement) — chaque carte contient le(s) niveau(x) et les compétences associées. Je peux remplacer les placeholders par les intitulés exacts et les compétences issues du PDF si vous le souhaitez.</p>
+          <p class="text-slate-300 text-center mb-8">Cliquez sur une carte pour afficher les apprentissages critiques (AC).</p>
 
           <div class="grid grid-cols-1 gap-6">
             <!-- UE 1 - Réaliser -->
-            <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-6 border border-indigo-500/30">
-              <h3 class="text-2xl font-extrabold text-indigo-200 mb-2">Réaliser — Conception & développement</h3>
-              <p class="text-slate-300 text-sm mb-2">Concevoir, coder, tester et intégrer une solution informatique.</p>
-              <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 1 : Développer des applications informatiques simples</p>
-              <ul class="text-slate-300 text-sm space-y-2">
-                <li>• AC11.01 : Implémenter des conceptions simples</li>
-                <li>• AC11.02 : Élaborer des conceptions simples</li>
-                <li>• AC11.03 : Faire des essais et évaluer leurs résultats en regard des spécifications</li>
-                <li>• AC11.04 : Développer des interfaces utilisateurs</li>
-              </ul>
+            <div 
+              class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-6 border border-indigo-500/30 cursor-pointer hover:border-indigo-400 transition-all"
+              @click="toggleUE('ue1')"
+            >
+              <div class="flex items-center justify-between">
+                <div class="flex-1">
+                  <h3 class="text-2xl font-extrabold text-indigo-200 mb-2">Réaliser — Conception & développement</h3>
+                  <p class="text-slate-300 text-sm mb-2">Concevoir, coder, tester et intégrer une solution informatique.</p>
+                </div>
+                <div class="text-3xl text-indigo-400 transition-transform" :style="{ transform: expandedUE === 'ue1' ? 'rotate(180deg)' : 'rotate(0deg)' }">
+                  ▼
+                </div>
+              </div>
+              <div v-if="expandedUE === 'ue1'" class="mt-4 pt-4 border-t border-indigo-500/30">
+                <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 1 : Développer des applications informatiques simples</p>
+                <ul class="text-slate-300 text-sm space-y-2">
+                  <li>• AC11.01 : Implémenter des conceptions simples</li>
+                  <li>• AC11.02 : Élaborer des conceptions simples</li>
+                  <li>• AC11.03 : Faire des essais et évaluer leurs résultats en regard des spécifications</li>
+                  <li>• AC11.04 : Développer des interfaces utilisateurs</li>
+                </ul>
+                <p class="text-indigo-300 text-lg mb-3 italic font-bold mt-4">Niveau 2 : Partir des exigences et aller jusqu'à une application complète</p>
+                <ul class="text-slate-300 text-sm space-y-2">
+                  <li>• AC21.01 : Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences</li>
+                  <li>• AC21.02 : Appliquer des principes d'accessibilité et d'ergonomie</li>
+                  <li>• AC21.03 : Adopter de bonnes pratiques de conception et de programmation</li>
+                  <li>• AC21.04 : Vérifier et valider la qualité de l'application par les tests</li>
+                </ul>
+                <p class="text-indigo-300 text-lg mb-3 italic font-bold mt-4">Niveau 3 : Adapter des applications sur un ensemble de supports (embarqué, web, mobile, IoT...)</p>
+                <ul class="text-slate-300 text-sm space-y-2">
+                  <li>• AC31.01 : Choisir et implémenter les architectures adaptées</li>
+                  <li>• AC31.02 : Faire évoluer une application existante</li>
+                  <li>• AC31.03 : Intégrer des solutions dans un environnement de production</li>
+                </ul>
+              </div>
             </div>
 
             <!-- UE 2 - Optimiser -->
-            <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-6 border border-indigo-500/30">
-              <h3 class="text-2xl font-extrabold text-indigo-200 mb-2">Optimiser — Performance & efficience</h3>
-              <p class="text-slate-300 text-sm mb-2">Optimiser le temps d'exécution et la consommation de ressources.</p>
-              <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 1 : Appréhender et construire des algorithmes</p>
-              <ul class="text-slate-300 text-sm space-y-2">
-                <li>• AC12.01 : Analyser un problème avec méthode (découpage, structure de données...)</li>
-                <li>• AC12.02 : Comparer des algorithmes pour des problèmes classiques</li>
-                <li>• AC12.03 : Formaliser et mettre en œuvre des outils mathématiques pour l'informatique</li>
-              </ul>
-              <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 2 : Sélectionner les algorithmes adéquats pour répondre à un problème donné</p>
-              <ul class="text-slate-300 text-sm space-y-2">
-                <li>• AC22.01 : Choisir des structures de données complexes adaptées au problème</li>
-                <li>• AC22.02 : Utiliser des techniques algorithmiques adaptées pour des problèmes complexes</li>
-                <li>• AC22.03 : Comprendre les enjeux et moyens de sécurisation des données et du code</li>
-                <li>• AC22.04 : Évaluer l'impact environnemental et sociétal des solutions proposées</li>
-              </ul>
-              <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 3 : Analyser et optimiser des applications</p>
-              <ul class="text-slate-300 text-sm space-y-2">
-                <li>• AC32.01 : Anticiper les résultats de diverses métriques</li>
-                <li>• AC32.02 : Profiler, analyser et justifier le comportement d'un code existant</li>
-                <li>• AC32.03 : Choisir et utiliser des bibliothèques et méthodes dédiées au domaine d'application</li>
-              </ul>
+            <div 
+              class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-6 border border-indigo-500/30 cursor-pointer hover:border-indigo-400 transition-all"
+              @click="toggleUE('ue2')"
+            >
+              <div class="flex items-center justify-between">
+                <div class="flex-1">
+                  <h3 class="text-2xl font-extrabold text-indigo-200 mb-2">Optimiser — Performance & efficience</h3>
+                  <p class="text-slate-300 text-sm mb-2">Optimiser le temps d'exécution et la consommation de ressources.</p>
+                </div>
+                <div class="text-3xl text-indigo-400 transition-transform" :style="{ transform: expandedUE === 'ue2' ? 'rotate(180deg)' : 'rotate(0deg)' }">
+                  ▼
+                </div>
+              </div>
+              <div v-if="expandedUE === 'ue2'" class="mt-4 pt-4 border-t border-indigo-500/30">
+                <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 1 : Appréhender et construire des algorithmes</p>
+                <ul class="text-slate-300 text-sm space-y-2">
+                  <li>• AC12.01 : Analyser un problème avec méthode (découpage, structure de données...)</li>
+                  <li>• AC12.02 : Comparer des algorithmes pour des problèmes classiques</li>
+                  <li>• AC12.03 : Formaliser et mettre en œuvre des outils mathématiques pour l'informatique</li>
+                </ul>
+                <p class="text-indigo-300 text-lg mb-3 italic font-bold mt-4">Niveau 2 : Sélectionner les algorithmes adéquats pour répondre à un problème donné</p>
+                <ul class="text-slate-300 text-sm space-y-2">
+                  <li>• AC22.01 : Choisir des structures de données complexes adaptées au problème</li>
+                  <li>• AC22.02 : Utiliser des techniques algorithmiques adaptées pour des problèmes complexes</li>
+                  <li>• AC22.03 : Comprendre les enjeux et moyens de sécurisation des données et du code</li>
+                  <li>• AC22.04 : Évaluer l'impact environnemental et sociétal des solutions proposées</li>
+                </ul>
+                <p class="text-indigo-300 text-lg mb-3 italic font-bold mt-4">Niveau 3 : Analyser et optimiser des applications</p>
+                <ul class="text-slate-300 text-sm space-y-2">
+                  <li>• AC32.01 : Anticiper les résultats de diverses métriques</li>
+                  <li>• AC32.02 : Profiler, analyser et justifier le comportement d'un code existant</li>
+                  <li>• AC32.03 : Choisir et utiliser des bibliothèques et méthodes dédiées au domaine d'application</li>
+                </ul>
+              </div>
             </div>
 
             <!-- UE 3 - Administrer -->
-            <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-6 border border-indigo-500/30">
-              <h3 class="text-2xl font-extrabold text-indigo-200 mb-2">Administrer — Infrastructures & services</h3>
-              <p class="text-slate-300 text-sm mb-2">Installer, configurer et maintenir infrastructures, services et réseaux.</p>
-              <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 1 : Installer et configurer un poste de travail</p>
-              <ul class="text-slate-300 text-sm space-y-2">
-                <li>• AC13.01 : Identifier les différents composants d’un système numérique</li>
-                <li>• AC13.02 : Utiliser les fonctionnalités de base d’un système multiutilisateurs</li>
-                <li>• AC13.03 : Installer et configurer un système d’exploitation et des outils de développement</li>
-                <li>• AC13.04 : Configurer un poste de travail dans un réseau d’entreprise</li>
-              </ul>
-              <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 2 : Déployer des services dans une architecture réseau</p>
-              <ul class="text-slate-300 text-sm space-y-2">
-                <li>• AC23.01 : Concevoir et développer des applications communicantes</li>
-                <li>• AC23.02 : Utiliser des serveurs et des services réseaux virtualisés</li>
-                <li>• AC23.03 : Sécuriser les services et données d’un système</li>
-              </ul>
+            <div 
+              class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-6 border border-indigo-500/30 cursor-pointer hover:border-indigo-400 transition-all"
+              @click="toggleUE('ue3')"
+            >
+              <div class="flex items-center justify-between">
+                <div class="flex-1">
+                  <h3 class="text-2xl font-extrabold text-indigo-200 mb-2">Administrer — Infrastructures & services</h3>
+                  <p class="text-slate-300 text-sm mb-2">Installer, configurer et maintenir infrastructures, services et réseaux.</p>
+                </div>
+                <div class="text-3xl text-indigo-400 transition-transform" :style="{ transform: expandedUE === 'ue3' ? 'rotate(180deg)' : 'rotate(0deg)' }">
+                  ▼
+                </div>
+              </div>
+              <div v-if="expandedUE === 'ue3'" class="mt-4 pt-4 border-t border-indigo-500/30">
+                <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 1 : Installer et configurer un poste de travail</p>
+                <ul class="text-slate-300 text-sm space-y-2">
+                  <li>• AC13.01 : Identifier les différents composants d'un système numérique</li>
+                  <li>• AC13.02 : Utiliser les fonctionnalités de base d'un système multiutilisateurs</li>
+                  <li>• AC13.03 : Installer et configurer un système d'exploitation et des outils de développement</li>
+                  <li>• AC13.04 : Configurer un poste de travail dans un réseau d'entreprise</li>
+                </ul>
+                <p class="text-indigo-300 text-lg mb-3 italic font-bold mt-4">Niveau 2 : Déployer des services dans une architecture réseau</p>
+                <ul class="text-slate-300 text-sm space-y-2">
+                  <li>• AC23.01 : Concevoir et développer des applications communicantes</li>
+                  <li>• AC23.02 : Utiliser des serveurs et des services réseaux virtualisés</li>
+                  <li>• AC23.03 : Sécuriser les services et données d'un système</li>
+                </ul>
+              </div>
             </div>
 
             <!-- UE 4 - Gérer -->
-            <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-6 border border-indigo-500/30">
-              <h3 class="text-2xl font-extrabold text-indigo-200 mb-2">Gérer — Données & pilotage</h3>
-              <p class="text-slate-300 text-sm mb-2">Concevoir et exploiter les données pour le pilotage de l'entreprise.</p>
-              <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 1 : Concevoir et mettre en place une base de données à partir d’un cahier des charges client</p>
-              <ul class="text-slate-300 text-sm space-y-2">
-                <li>• AC14.01 : Mettre à jour et interroger une base de données relationnelle</li>
-                <li>• AC14.02 : Visualiser des données</li>
-                <li>• AC14.03 : Concevoir une base de données relationnelle à partir d’un cahier des charges</li>
-              </ul>
-              <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 2 : Optimiser une base de données, interagir avec une application et mettre en œuvre la sécurité</p>
-              <ul class="text-slate-300 text-sm space-y-2">
-                <li>• AC24.01 : Optimiser les modèles de données de l’entreprise</li>
-                <li>• AC24.02 : Assurer la sécurité des données (intégrité et confidentialité)</li>
-                <li>• AC24.03 : Organiser la restitution de données à travers la programmation et la visualisation</li>
-                <li>• AC24.04 : Manipuler des données hétérogènes</li>
-              </ul>
+            <div 
+              class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-6 border border-indigo-500/30 cursor-pointer hover:border-indigo-400 transition-all"
+              @click="toggleUE('ue4')"
+            >
+              <div class="flex items-center justify-between">
+                <div class="flex-1">
+                  <h3 class="text-2xl font-extrabold text-indigo-200 mb-2">Gérer — Données & pilotage</h3>
+                  <p class="text-slate-300 text-sm mb-2">Concevoir et exploiter les données pour le pilotage de l'entreprise.</p>
+                </div>
+                <div class="text-3xl text-indigo-400 transition-transform" :style="{ transform: expandedUE === 'ue4' ? 'rotate(180deg)' : 'rotate(0deg)' }">
+                  ▼
+                </div>
+              </div>
+              <div v-if="expandedUE === 'ue4'" class="mt-4 pt-4 border-t border-indigo-500/30">
+                <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 1 : Concevoir et mettre en place une base de données à partir d'un cahier des charges client</p>
+                <ul class="text-slate-300 text-sm space-y-2">
+                  <li>• AC14.01 : Mettre à jour et interroger une base de données relationnelle</li>
+                  <li>• AC14.02 : Visualiser des données</li>
+                  <li>• AC14.03 : Concevoir une base de données relationnelle à partir d'un cahier des charges</li>
+                </ul>
+                <p class="text-indigo-300 text-lg mb-3 italic font-bold mt-4">Niveau 2 : Optimiser une base de données, interagir avec une application et mettre en œuvre la sécurité</p>
+                <ul class="text-slate-300 text-sm space-y-2">
+                  <li>• AC24.01 : Optimiser les modèles de données de l'entreprise</li>
+                  <li>• AC24.02 : Assurer la sécurité des données (intégrité et confidentialité)</li>
+                  <li>• AC24.03 : Organiser la restitution de données à travers la programmation et la visualisation</li>
+                  <li>• AC24.04 : Manipuler des données hétérogènes</li>
+                </ul>
+              </div>
             </div>
 
             <!-- UE 5 - Conduire -->
-            <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-6 border border-indigo-500/30">
-              <h3 class="text-2xl font-extrabold text-indigo-200 mb-2">Conduire — Pilotage de projet</h3>
-              <p class="text-slate-300 text-sm mb-2">Organiser et piloter des projets informatiques (classiques ou agiles).</p>
-              <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 1 : Identifier les besoins métiers des clients et des utilisateurs</p>
-              <ul class="text-slate-300 text-sm space-y-2">
-                <li>• AC15.01 : Appréhender les besoins du client et de l'utilisateur</li>
-                <li>• AC15.02 : Mettre en place les outils de gestion de projet</li>
-                <li>• AC15.03 : Identifier les acteurs et les différentes phases d'un cycle de développement</li>
-              </ul>
-              <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 2 : Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et des utilisateurs</p>
-              <ul class="text-slate-300 text-sm space-y-2">
-                <li>• AC25.01 : Identifier les processus présents dans une organisation pour améliorer les SI</li>
-                <li>• AC25.02 : Formaliser les besoins du client et de l'utilisateur</li>
-                <li>• AC25.03 : Identifier les critères de faisabilité d'un projet informatique</li>
-                <li>• AC25.04 : Définir et mettre en œuvre une démarche de suivi de projet</li>
-              </ul>
+            <div 
+              class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-6 border border-indigo-500/30 cursor-pointer hover:border-indigo-400 transition-all"
+              @click="toggleUE('ue5')"
+            >
+              <div class="flex items-center justify-between">
+                <div class="flex-1">
+                  <h3 class="text-2xl font-extrabold text-indigo-200 mb-2">Conduire — Pilotage de projet</h3>
+                  <p class="text-slate-300 text-sm mb-2">Organiser et piloter des projets informatiques (classiques ou agiles).</p>
+                </div>
+                <div class="text-3xl text-indigo-400 transition-transform" :style="{ transform: expandedUE === 'ue5' ? 'rotate(180deg)' : 'rotate(0deg)' }">
+                  ▼
+                </div>
+              </div>
+              <div v-if="expandedUE === 'ue5'" class="mt-4 pt-4 border-t border-indigo-500/30">
+                <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 1 : Identifier les besoins métiers des clients et des utilisateurs</p>
+                <ul class="text-slate-300 text-sm space-y-2">
+                  <li>• AC15.01 : Appréhender les besoins du client et de l'utilisateur</li>
+                  <li>• AC15.02 : Mettre en place les outils de gestion de projet</li>
+                  <li>• AC15.03 : Identifier les acteurs et les différentes phases d'un cycle de développement</li>
+                </ul>
+                <p class="text-indigo-300 text-lg mb-3 italic font-bold mt-4">Niveau 2 : Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et des utilisateurs</p>
+                <ul class="text-slate-300 text-sm space-y-2">
+                  <li>• AC25.01 : Identifier les processus présents dans une organisation pour améliorer les SI</li>
+                  <li>• AC25.02 : Formaliser les besoins du client et de l'utilisateur</li>
+                  <li>• AC25.03 : Identifier les critères de faisabilité d'un projet informatique</li>
+                  <li>• AC25.04 : Définir et mettre en œuvre une démarche de suivi de projet</li>
+                </ul>
+              </div>
             </div>
 
             <!-- UE 6 - Collaborer -->
-            <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-6 border border-indigo-500/30">
-              <h3 class="text-2xl font-extrabold text-indigo-200 mb-2">Collaborer — Travail en équipe</h3>
-              <p class="text-slate-300 text-sm mb-2">Acquérir et mobiliser les aptitudes pour travailler efficacement en équipe.</p>
-              <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 1 : Identifier ses aptitudes pour travailler dans une équipe</p>
-              <ul class="text-slate-300 text-sm space-y-2">
-                <li>• AC16.01 : Appréhender l’écosystème numérique</li>
-                <li>• AC16.02 : Découvrir les aptitudes requises selon les différents secteurs informatiques</li>
-                <li>• AC16.03 : Identifier les statuts, fonctions et rôles de chaque membre d’une équipe pluridisciplinaire</li>
-                <li>• AC16.04 : Acquérir les compétences interpersonnelles pour travailler en équipe</li>
-              </ul>
-              <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 2 : Situer son rôle et ses missions au sein d’une équipe informatique</p>
-              <ul class="text-slate-300 text-sm space-y-2">
-                <li>• AC26.01 : Comprendre la diversité, la structure et la dimension de l’informatique dans une organisation</li>
-                <li>• AC26.02 : Appliquer une démarche pour intégrer une équipe informatique au sein d’une organisation</li>
-                <li>• AC26.03 : Mobiliser les compétences interpersonnelles pour travailler dans une équipe informatique</li>
-                <li>• AC26.04 : Rendre compte de son activité professionnelle</li>
-              </ul>
-              <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 3 : Manager une équipe informatique</p>
-              <ul class="text-slate-300 text-sm space-y-2">
-                <li>• AC36.01 : Organiser et partager une veille technologique et informationnelle</li>
-                <li>• AC36.02 : Identifier les enjeux de l’économie de l’innovation numérique</li>
-                <li>• AC36.03 : Guider la conduite du changement informatique au sein d’une organisation</li>
-                <li>• AC36.04 : Accompagner le management de projet informatique</li>
-              </ul>
+            <div 
+              class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-6 border border-indigo-500/30 cursor-pointer hover:border-indigo-400 transition-all"
+              @click="toggleUE('ue6')"
+            >
+              <div class="flex items-center justify-between">
+                <div class="flex-1">
+                  <h3 class="text-2xl font-extrabold text-indigo-200 mb-2">Collaborer — Travail en équipe</h3>
+                  <p class="text-slate-300 text-sm mb-2">Acquérir et mobiliser les aptitudes pour travailler efficacement en équipe.</p>
+                </div>
+                <div class="text-3xl text-indigo-400 transition-transform" :style="{ transform: expandedUE === 'ue6' ? 'rotate(180deg)' : 'rotate(0deg)' }">
+                  ▼
+                </div>
+              </div>
+              <div v-if="expandedUE === 'ue6'" class="mt-4 pt-4 border-t border-indigo-500/30">
+                <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 1 : Identifier ses aptitudes pour travailler dans une équipe</p>
+                <ul class="text-slate-300 text-sm space-y-2">
+                  <li>• AC16.01 : Appréhender l'écosystème numérique</li>
+                  <li>• AC16.02 : Découvrir les aptitudes requises selon les différents secteurs informatiques</li>
+                  <li>• AC16.03 : Identifier les statuts, fonctions et rôles de chaque membre d'une équipe pluridisciplinaire</li>
+                  <li>• AC16.04 : Acquérir les compétences interpersonnelles pour travailler en équipe</li>
+                </ul>
+                <p class="text-indigo-300 text-lg mb-3 italic font-bold mt-4">Niveau 2 : Situer son rôle et ses missions au sein d'une équipe informatique</p>
+                <ul class="text-slate-300 text-sm space-y-2">
+                  <li>• AC26.01 : Comprendre la diversité, la structure et la dimension de l'informatique dans une organisation</li>
+                  <li>• AC26.02 : Appliquer une démarche pour intégrer une équipe informatique au sein d'une organisation</li>
+                  <li>• AC26.03 : Mobiliser les compétences interpersonnelles pour travailler dans une équipe informatique</li>
+                  <li>• AC26.04 : Rendre compte de son activité professionnelle</li>
+                </ul>
+                <p class="text-indigo-300 text-lg mb-3 italic font-bold mt-4">Niveau 3 : Manager une équipe informatique</p>
+                <ul class="text-slate-300 text-sm space-y-2">
+                  <li>• AC36.01 : Organiser et partager une veille technologique et informationnelle</li>
+                  <li>• AC36.02 : Identifier les enjeux de l'économie de l'innovation numérique</li>
+                  <li>• AC36.03 : Guider la conduite du changement informatique au sein d'une organisation</li>
+                  <li>• AC36.04 : Accompagner le management de projet informatique</li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
