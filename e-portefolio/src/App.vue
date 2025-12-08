@@ -1,47 +1,68 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import { useRouter } from 'vue-router'
+const router = useRouter()
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <div>
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-slate-800/80 backdrop-blur-md border-b border-indigo-500/20">
+      <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <router-link to="/" class="text-2xl font-bold text-indigo-400 hover:text-indigo-300 transition-colors">
+          ETHANN
+        </router-link>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
+        <div class="flex gap-8 items-center">
+          <router-link 
+            to="/" 
+            :class="router.currentRoute.value.path === '/' ? 'text-indigo-400 underline' : 'text-slate-300 hover:text-indigo-400'"
+            class="font-semibold transition-colors"
+          >
+            À propos
+          </router-link>
+          <router-link 
+            to="/competences" 
+            :class="router.currentRoute.value.path === '/competences' ? 'text-indigo-400' : 'text-slate-300 hover:text-indigo-400'"
+            class="font-semibold transition-colors"
+          >
+            Compétences
+          </router-link>
+          <router-link 
+            to="/experiences" 
+            :class="router.currentRoute.value.path === '/experiences' ? 'text-indigo-400' : 'text-slate-300 hover:text-indigo-400'"
+            class="font-semibold transition-colors"
+          >
+            Expériences
+          </router-link>
+          <router-link 
+            to="/loisirs" 
+            :class="router.currentRoute.value.path === '/loisirs' ? 'text-indigo-400' : 'text-slate-300 hover:text-indigo-400'"
+            class="font-semibold transition-colors"
+          >
+            Loisirs
+          </router-link>
+          <router-link 
+            to="/formation" 
+            :class="router.currentRoute.value.path === '/formation' ? 'text-indigo-400' : 'text-slate-300 hover:text-indigo-400'"
+            class="font-semibold transition-colors"
+          >
+            Ma formation
+          </router-link>
+          <router-link 
+            to="/mes-atouts" 
+            :class="router.currentRoute.value.path === '/mes-atouts' ? 'text-indigo-400' : 'text-slate-300 hover:text-indigo-400'"
+            class="font-semibold transition-colors"
+          >
+            Mes atouts
+          </router-link>
+        </div>
+      </nav>
+    </header>
 
-  <main>
-    <TheWelcome />
-  </main>
+    <!-- Router View -->
+    <router-view />
+  </div>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>
