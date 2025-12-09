@@ -33,30 +33,83 @@
         </div>
       </section>
 
-      <!-- Section Bulles - Domaines -->
+      <!-- Section Profil & Contact -->
       <section class="max-w-6xl mx-auto px-6 mb-20">
-        <h2 class="text-3xl font-bold text-white mb-12 text-center">Mes domaines d'expertise</h2>
+        <h2 class="text-3xl font-bold text-white mb-12 text-center">Profil & Contact</h2>
         <div class="grid md:grid-cols-2 gap-8">
-          <!-- Bulle 1 -->
-          <div class="group">
-            <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-full w-48 h-48 flex items-center justify-center mx-auto mb-6 shadow-2xl hover:shadow-indigo-500/50 transition-all duration-300 hover:scale-105">
-              <div class="text-center">
-                <div class="text-4xl mb-2">💻</div>
-                <p class="text-white font-bold">Développement</p>
+          <!-- Carte Profil -->
+          <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-8 border border-indigo-500/30">
+            <h3 class="text-2xl font-bold text-indigo-200 mb-6">Informations Personnelles</h3>
+            <div class="space-y-4 text-slate-300">
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">👤</span>
+                <div>
+                  <p class="text-sm text-slate-400">Nom</p>
+                  <p class="font-semibold text-white">Ethann COCHENET</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">📅</span>
+                <div>
+                  <p class="text-sm text-slate-400">Date de naissance</p>
+                  <p class="font-semibold text-white">04/04/2005 (20 ans)</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">📍</span>
+                <div>
+                  <p class="text-sm text-slate-400">Localisation</p>
+                  <p class="font-semibold text-white">Cluses, Haute-Savoie</p>
+                </div>
               </div>
             </div>
-            <p class="text-slate-300 text-center text-sm">Web moderne avec Vue.js, React, JavaScript et développement d'applications (Python, C#)</p>
           </div>
 
-          <!-- Bulle 2 -->
-          <div class="group">
-            <div class="bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-full w-48 h-48 flex items-center justify-center mx-auto mb-6 shadow-2xl hover:shadow-indigo-600/50 transition-all duration-300 hover:scale-105">
-              <div class="text-center">
-                <div class="text-4xl mb-2">🚀</div>
-                <p class="text-white font-bold">Projets</p>
-              </div>
+          <!-- Carte Contact & Téléchargement -->
+          <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-8 border border-indigo-500/30">
+            <h3 class="text-2xl font-bold text-indigo-200 mb-6">Moyens de Contact</h3>
+            <div class="space-y-4 text-slate-300">
+              <a href="mailto:ethann.cochenet@gmail.com" class="flex items-center gap-3 hover:text-indigo-300 transition-colors">
+                <span class="text-2xl">✉️</span>
+                <div>
+                  <p class="text-sm text-slate-400">Email</p>
+                  <p class="font-semibold text-white break-all">ethann.cochenet@gmail.com</p>
+                </div>
+              </a>
+              <a href="tel:0768764606" class="flex items-center gap-3 hover:text-indigo-300 transition-colors">
+                <span class="text-2xl">📱</span>
+                <div>
+                  <p class="text-sm text-slate-400">Téléphone</p>
+                  <p class="font-semibold text-white">07 68 76 46 06</p>
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/in/ethann-cochenet-5211a4206/?originalSubdomain=fr" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 hover:text-indigo-300 transition-colors">
+                <span class="text-2xl">💼</span>
+                <div>
+                  <p class="text-sm text-slate-400">LinkedIn</p>
+                  <p class="font-semibold text-white">Ethann COCHENET</p>
+                </div>
+              </a>
+              <a href="https://github.com/ethann-ol" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 hover:text-indigo-300 transition-colors">
+                <span class="text-2xl">🐙</span>
+                <div>
+                  <p class="text-sm text-slate-400">GitHub</p>
+                  <p class="font-semibold text-white">ethann-ol</p>
+                </div>
+              </a>
             </div>
-            <p class="text-slate-300 text-center text-sm">Réalisations professionnelles et personnelles, prototypage et déploiement</p>
+
+            <!-- Boutons CV -->
+            <div class="mt-8 pt-6 border-t border-indigo-500/30 space-y-3">
+              <a href="/assets/CV_EthannCOCHENET.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition-colors w-full justify-center">
+                <span>👁️</span>
+                <span>Prévisualiser mon CV</span>
+              </a>
+              <a href="/assets/CV_EthannCOCHENET.pdf" download class="inline-flex items-center gap-3 px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-lg transition-colors w-full justify-center">
+                <span>📄</span>
+                <span>Télécharger mon CV</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -77,7 +130,7 @@
           <router-link to="/experiences" class="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-full transition-all duration-300 hover:scale-105 shadow-lg">
             Découvrir mes expériences
           </router-link>
-          <a href="#" class="px-8 py-3 border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500/10 font-bold rounded-full transition-all duration-300">
+          <a href="/assets/CV_EthannCOCHENET.pdf" download class="px-8 py-3 border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500/10 font-bold rounded-full transition-all duration-300">
             Télécharger mon CV
           </a>
         </div>

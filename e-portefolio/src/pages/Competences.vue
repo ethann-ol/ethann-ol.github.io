@@ -44,23 +44,44 @@ const toggleUE = (ueId) => {
               <div v-if="expandedUE === 'ue1'" class="mt-4 pt-4 border-t border-indigo-500/30">
                 <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 1 : Développer des applications informatiques simples</p>
                 <ul class="text-slate-300 text-sm space-y-2">
-                  <li>• AC11.01 : Implémenter des conceptions simples</li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC11.01 : Implémenter des conceptions simples</span>
+                    <router-link to="/projects/starbound-legacy" class="ml-2 px-2 py-1 bg-indigo-600/50 hover:bg-indigo-600 text-indigo-100 text-xs rounded transition-colors">StarBound →</router-link>
+                  </li>
                   <li>• AC11.02 : Élaborer des conceptions simples</li>
                   <li>• AC11.03 : Faire des essais et évaluer leurs résultats en regard des spécifications</li>
-                  <li>• AC11.04 : Développer des interfaces utilisateurs</li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC11.04 : Développer des interfaces utilisateurs</span>
+                    <router-link to="/projects/starbound-legacy" class="ml-2 px-2 py-1 bg-indigo-600/50 hover:bg-indigo-600 text-indigo-100 text-xs rounded transition-colors">StarBound →</router-link>
+                  </li>
                 </ul>
                 <p class="text-indigo-300 text-lg mb-3 italic font-bold mt-4">Niveau 2 : Partir des exigences et aller jusqu'à une application complète</p>
                 <ul class="text-slate-300 text-sm space-y-2">
-                  <li>• AC21.01 : Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences</li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC21.01 : Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences</span>
+                    <router-link to="/projects/savoy-sidesktop" class="ml-2 px-2 py-1 bg-indigo-600/50 hover:bg-indigo-600 text-indigo-100 text-xs rounded transition-colors whitespace-nowrap">Savoy →</router-link>
+                  </li>
                   <li>• AC21.02 : Appliquer des principes d'accessibilité et d'ergonomie</li>
                   <li>• AC21.03 : Adopter de bonnes pratiques de conception et de programmation</li>
-                  <li>• AC21.04 : Vérifier et valider la qualité de l'application par les tests</li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC21.04 : Vérifier et valider la qualité de l'application par les tests</span>
+                    <router-link to="/projects/savoy-sidesktop" class="ml-2 px-2 py-1 bg-indigo-600/50 hover:bg-indigo-600 text-indigo-100 text-xs rounded transition-colors whitespace-nowrap">Savoy →</router-link>
+                  </li>
                 </ul>
                 <p class="text-indigo-300 text-lg mb-3 italic font-bold mt-4">Niveau 3 : Adapter des applications sur un ensemble de supports (embarqué, web, mobile, IoT...)</p>
                 <ul class="text-slate-300 text-sm space-y-2">
-                  <li>• AC31.01 : Choisir et implémenter les architectures adaptées</li>
-                  <li>• AC31.02 : Faire évoluer une application existante</li>
-                  <li>• AC31.03 : Intégrer des solutions dans un environnement de production</li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC31.01 : Choisir et implémenter les architectures adaptées</span>
+                    <router-link to="/projects/caspino" class="ml-2 px-2 py-1 bg-amber-600/50 hover:bg-amber-600 text-amber-100 text-xs rounded transition-colors whitespace-nowrap">Caspino →</router-link>
+                  </li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC31.02 : Faire évoluer une application existante</span>
+                    <router-link to="/projects/savoy-sidesktop" class="ml-2 px-2 py-1 bg-indigo-600/50 hover:bg-indigo-600 text-indigo-100 text-xs rounded transition-colors whitespace-nowrap">Savoy →</router-link>
+                  </li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC31.03 : Intégrer des solutions dans un environnement de production</span>
+                    <router-link to="/projects/caspino" class="ml-2 px-2 py-1 bg-amber-600/50 hover:bg-amber-600 text-amber-100 text-xs rounded transition-colors whitespace-nowrap">Caspino →</router-link>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -82,22 +103,34 @@ const toggleUE = (ueId) => {
               <div v-if="expandedUE === 'ue2'" class="mt-4 pt-4 border-t border-indigo-500/30">
                 <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 1 : Appréhender et construire des algorithmes</p>
                 <ul class="text-slate-300 text-sm space-y-2">
-                  <li>• AC12.01 : Analyser un problème avec méthode (découpage, structure de données...)</li>
-                  <li>• AC12.02 : Comparer des algorithmes pour des problèmes classiques</li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC12.01 : Analyser un problème avec méthode (découpage, structure de données...)</span>
+                    <router-link to="/projects/starbound-legacy" class="ml-2 px-2 py-1 bg-indigo-600/50 hover:bg-indigo-600 text-indigo-100 text-xs rounded transition-colors whitespace-nowrap">StarBound →</router-link>
+                  </li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC12.02 : Comparer des algorithmes pour des problèmes classiques</span>
+                    <router-link to="/projects/starbound-legacy" class="ml-2 px-2 py-1 bg-indigo-600/50 hover:bg-indigo-600 text-indigo-100 text-xs rounded transition-colors whitespace-nowrap">StarBound →</router-link>
+                  </li>
                   <li>• AC12.03 : Formaliser et mettre en œuvre des outils mathématiques pour l'informatique</li>
                 </ul>
                 <p class="text-indigo-300 text-lg mb-3 italic font-bold mt-4">Niveau 2 : Sélectionner les algorithmes adéquats pour répondre à un problème donné</p>
                 <ul class="text-slate-300 text-sm space-y-2">
                   <li>• AC22.01 : Choisir des structures de données complexes adaptées au problème</li>
                   <li>• AC22.02 : Utiliser des techniques algorithmiques adaptées pour des problèmes complexes</li>
-                  <li>• AC22.03 : Comprendre les enjeux et moyens de sécurisation des données et du code</li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC22.03 : Comprendre les enjeux et moyens de sécurisation des données et du code</span>
+                    <router-link to="/projects/savoy-sidesktop" class="ml-2 px-2 py-1 bg-indigo-600/50 hover:bg-indigo-600 text-indigo-100 text-xs rounded transition-colors whitespace-nowrap">Savoy →</router-link>
+                  </li>
                   <li>• AC22.04 : Évaluer l'impact environnemental et sociétal des solutions proposées</li>
                 </ul>
                 <p class="text-indigo-300 text-lg mb-3 italic font-bold mt-4">Niveau 3 : Analyser et optimiser des applications</p>
                 <ul class="text-slate-300 text-sm space-y-2">
                   <li>• AC32.01 : Anticiper les résultats de diverses métriques</li>
                   <li>• AC32.02 : Profiler, analyser et justifier le comportement d'un code existant</li>
-                  <li>• AC32.03 : Choisir et utiliser des bibliothèques et méthodes dédiées au domaine d'application</li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC32.03 : Choisir et utiliser des bibliothèques et méthodes dédiées au domaine d'application</span>
+                    <router-link to="/projects/caspino" class="ml-2 px-2 py-1 bg-amber-600/50 hover:bg-amber-600 text-amber-100 text-xs rounded transition-colors whitespace-nowrap">Caspino →</router-link>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -126,8 +159,14 @@ const toggleUE = (ueId) => {
                 </ul>
                 <p class="text-indigo-300 text-lg mb-3 italic font-bold mt-4">Niveau 2 : Déployer des services dans une architecture réseau</p>
                 <ul class="text-slate-300 text-sm space-y-2">
-                  <li>• AC23.01 : Concevoir et développer des applications communicantes</li>
-                  <li>• AC23.02 : Utiliser des serveurs et des services réseaux virtualisés</li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC23.01 : Concevoir et développer des applications communicantes</span>
+                    <router-link to="/projects/caspino" class="ml-2 px-2 py-1 bg-amber-600/50 hover:bg-amber-600 text-amber-100 text-xs rounded transition-colors whitespace-nowrap">Caspino →</router-link>
+                  </li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC23.02 : Utiliser des serveurs et des services réseaux virtualisés</span>
+                    <router-link to="/projects/caspino" class="ml-2 px-2 py-1 bg-amber-600/50 hover:bg-amber-600 text-amber-100 text-xs rounded transition-colors whitespace-nowrap">Caspino →</router-link>
+                  </li>
                   <li>• AC23.03 : Sécuriser les services et données d'un système</li>
                 </ul>
               </div>
@@ -156,8 +195,14 @@ const toggleUE = (ueId) => {
                 </ul>
                 <p class="text-indigo-300 text-lg mb-3 italic font-bold mt-4">Niveau 2 : Optimiser une base de données, interagir avec une application et mettre en œuvre la sécurité</p>
                 <ul class="text-slate-300 text-sm space-y-2">
-                  <li>• AC24.01 : Optimiser les modèles de données de l'entreprise</li>
-                  <li>• AC24.02 : Assurer la sécurité des données (intégrité et confidentialité)</li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC24.01 : Optimiser les modèles de données de l'entreprise</span>
+                    <router-link to="/projects/caspino" class="ml-2 px-2 py-1 bg-amber-600/50 hover:bg-amber-600 text-amber-100 text-xs rounded transition-colors whitespace-nowrap">Caspino →</router-link>
+                  </li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC24.02 : Assurer la sécurité des données (intégrité et confidentialité)</span>
+                    <router-link to="/projects/caspino" class="ml-2 px-2 py-1 bg-amber-600/50 hover:bg-amber-600 text-amber-100 text-xs rounded transition-colors whitespace-nowrap">Caspino →</router-link>
+                  </li>
                   <li>• AC24.03 : Organiser la restitution de données à travers la programmation et la visualisation</li>
                   <li>• AC24.04 : Manipuler des données hétérogènes</li>
                 </ul>
@@ -214,14 +259,26 @@ const toggleUE = (ueId) => {
                 <ul class="text-slate-300 text-sm space-y-2">
                   <li>• AC16.01 : Appréhender l'écosystème numérique</li>
                   <li>• AC16.02 : Découvrir les aptitudes requises selon les différents secteurs informatiques</li>
-                  <li>• AC16.03 : Identifier les statuts, fonctions et rôles de chaque membre d'une équipe pluridisciplinaire</li>
-                  <li>• AC16.04 : Acquérir les compétences interpersonnelles pour travailler en équipe</li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC16.03 : Identifier les statuts, fonctions et rôles de chaque membre d'une équipe pluridisciplinaire</span>
+                    <router-link to="/projects/hunter" class="ml-2 px-2 py-1 bg-indigo-600/50 hover:bg-indigo-600 text-indigo-100 text-xs rounded transition-colors whitespace-nowrap">Hunter →</router-link>
+                  </li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC16.04 : Acquérir les compétences interpersonnelles pour travailler en équipe</span>
+                    <router-link to="/projects/hunter" class="ml-2 px-2 py-1 bg-indigo-600/50 hover:bg-indigo-600 text-indigo-100 text-xs rounded transition-colors whitespace-nowrap">Hunter →</router-link>
+                  </li>
                 </ul>
                 <p class="text-indigo-300 text-lg mb-3 italic font-bold mt-4">Niveau 2 : Situer son rôle et ses missions au sein d'une équipe informatique</p>
                 <ul class="text-slate-300 text-sm space-y-2">
                   <li>• AC26.01 : Comprendre la diversité, la structure et la dimension de l'informatique dans une organisation</li>
-                  <li>• AC26.02 : Appliquer une démarche pour intégrer une équipe informatique au sein d'une organisation</li>
-                  <li>• AC26.03 : Mobiliser les compétences interpersonnelles pour travailler dans une équipe informatique</li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC26.02 : Appliquer une démarche pour intégrer une équipe informatique au sein d'une organisation</span>
+                    <router-link to="/projects/hunter" class="ml-2 px-2 py-1 bg-indigo-600/50 hover:bg-indigo-600 text-indigo-100 text-xs rounded transition-colors whitespace-nowrap">Hunter →</router-link>
+                  </li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC26.03 : Mobiliser les compétences interpersonnelles pour travailler dans une équipe informatique</span>
+                    <router-link to="/projects/hunter" class="ml-2 px-2 py-1 bg-indigo-600/50 hover:bg-indigo-600 text-indigo-100 text-xs rounded transition-colors whitespace-nowrap">Hunter →</router-link>
+                  </li>
                   <li>• AC26.04 : Rendre compte de son activité professionnelle</li>
                 </ul>
                 <p class="text-indigo-300 text-lg mb-3 italic font-bold mt-4">Niveau 3 : Manager une équipe informatique</p>

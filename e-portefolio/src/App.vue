@@ -35,6 +35,13 @@ const router = useRouter()
             Expériences
           </router-link>
           <router-link 
+            to="/projects" 
+            :class="router.currentRoute.value.path.startsWith('/projects') ? 'text-indigo-400' : 'text-slate-300 hover:text-indigo-400'"
+            class="font-semibold transition-colors"
+          >
+            Projets
+          </router-link>
+          <router-link 
             to="/loisirs" 
             :class="router.currentRoute.value.path === '/loisirs' ? 'text-indigo-400' : 'text-slate-300 hover:text-indigo-400'"
             class="font-semibold transition-colors"
