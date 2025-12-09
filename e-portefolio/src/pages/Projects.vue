@@ -61,7 +61,7 @@
           <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-2xl p-6 border border-indigo-500/30 hover:border-indigo-400/50 transition-all">
             <p class="text-sm uppercase tracking-[0.2em] text-indigo-300/70 mb-2">TP — Jeu</p>
             <h2 class="text-2xl font-bold text-white mb-2">Hunter</h2>
-            <p class="text-slate-300 mb-4">Jeu d'élimination Unity en équipe de 3. Répartition clear : gameplay, 3D/Blender, audio. Focus collaboration.</p>
+            <p class="text-slate-300 mb-4">Jeu d'élimination Unity en équipe de 3. Répartition claire : gameplay, 3D/Blender, audio.</p>
             <div class="flex flex-wrap gap-2 mb-4 text-sm">
               <span class="px-3 py-1 bg-indigo-500/30 text-indigo-200 rounded-full">Unity</span>
               <span class="px-3 py-1 bg-indigo-500/30 text-indigo-200 rounded-full">C#</span>
