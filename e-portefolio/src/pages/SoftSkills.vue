@@ -1,4 +1,11 @@
 <script setup>
+import { ref } from 'vue'
+
+const activeTab = ref('outils')
+
+const setTab = (tab) => {
+  activeTab.value = tab
+}
 </script>
 
 <template>
@@ -12,28 +19,184 @@
     <div class="relative z-10">
       <header class="pt-12 pb-8 max-w-6xl mx-auto px-6">
         <h1 class="text-5xl font-bold text-white mb-2">Mes atouts</h1>
-        <p class="text-indigo-300 text-lg">Compétences transversales & comportementales</p>
+        <p class="text-indigo-300 text-lg">Consultez ci-dessous mes atouts techniques, mon niveau en langues étrangères, ainsi que mes soft-skills</p>
       </header>
 
-      <main class="max-w-6xl mx-auto px-6 py-20">
-        <!-- Soft Skills principales -->
-        <section class="mb-20">
-          <h2 class="text-3xl font-bold text-white mb-12 text-center">Compétences Transversales</h2>
+      <main class="max-w-6xl mx-auto px-6 py-12">
+        <!-- Tabs Navigation -->
+        <div class="flex justify-center gap-4 mb-12 flex-wrap">
+          <button 
+            @click="setTab('outils')" 
+            :class="activeTab === 'outils' ? 'bg-indigo-600 text-white' : 'bg-slate-700/50 text-slate-300 hover:bg-slate-700'"
+            class="px-8 py-3 font-bold rounded-full transition-all duration-300"
+          >
+            Outils numériques
+          </button>
+          <button 
+            @click="setTab('langues')" 
+            :class="activeTab === 'langues' ? 'bg-indigo-600 text-white' : 'bg-slate-700/50 text-slate-300 hover:bg-slate-700'"
+            class="px-8 py-3 font-bold rounded-full transition-all duration-300"
+          >
+            Langues étrangères
+          </button>
+          <button 
+            @click="setTab('softskills')" 
+            :class="activeTab === 'softskills' ? 'bg-indigo-600 text-white' : 'bg-slate-700/50 text-slate-300 hover:bg-slate-700'"
+            class="px-8 py-3 font-bold rounded-full transition-all duration-300"
+          >
+            Soft skills
+          </button>
+        </div>
+
+        <!-- Tab Content: Outils numériques -->
+        <section v-if="activeTab === 'outils'" class="mb-20">
+          <h2 class="text-3xl font-bold text-white mb-12 text-center">Outils Numériques & Technologies</h2>
+          
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Visual Studio / IDEs -->
+            <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-8 border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300">
+              <div class="flex items-start gap-4 mb-4">
+                <div class="text-4xl">💻</div>
+                <h3 class="text-2xl font-bold text-indigo-200">Visual Studio / IDEs</h3>
+              </div>
+              <p class="text-slate-300 mb-4">
+                Maîtrise avancée de Visual Studio pour le développement C#/.NET, WPF. Utilisation de VS Code pour le développement web (Vue.js, JavaScript).
+              </p>
+              <div class="w-full bg-slate-700 rounded-full h-3">
+                <div class="bg-indigo-500 h-3 rounded-full" style="width: 90%"></div>
+              </div>
+              <p class="text-indigo-400 text-sm mt-2">Niveau : Avancé (90%)</p>
+            </div>
+
+            <!-- Git / GitHub -->
+            <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-8 border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300">
+              <div class="flex items-start gap-4 mb-4">
+                <div class="text-4xl">🔀</div>
+                <h3 class="text-2xl font-bold text-indigo-200">Git / GitHub</h3>
+              </div>
+              <p class="text-slate-300 mb-4">
+                Gestion de versions avec Git, collaboration sur GitHub, création de branches, pull requests, résolution de conflits. Workflow d'équipe maîtrisé.
+              </p>
+              <div class="w-full bg-slate-700 rounded-full h-3">
+                <div class="bg-indigo-500 h-3 rounded-full" style="width: 85%"></div>
+              </div>
+              <p class="text-indigo-400 text-sm mt-2">Niveau : Avancé (85%)</p>
+            </div>
+
+            <!-- Bases de données -->
+            <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-8 border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300">
+              <div class="flex items-start gap-4 mb-4">
+                <div class="text-4xl">🗄️</div>
+                <h3 class="text-2xl font-bold text-indigo-200">Bases de Données</h3>
+              </div>
+              <p class="text-slate-300 mb-4">
+                SQL Server, PostgreSQL, MySQL, DB2. Maîtrise des requêtes SQL, Entity Framework, ADO.NET. Conception de modèles relationnels normalisés.
+              </p>
+              <div class="w-full bg-slate-700 rounded-full h-3">
+                <div class="bg-indigo-500 h-3 rounded-full" style="width: 88%"></div>
+              </div>
+              <p class="text-indigo-400 text-sm mt-2">Niveau : Avancé (88%)</p>
+            </div>
+
+            <!-- Unity / Blender -->
+            <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-8 border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300">
+              <div class="flex items-start gap-4 mb-4">
+                <div class="text-4xl">🎮</div>
+                <h3 class="text-2xl font-bold text-indigo-200">Unity / Blender</h3>
+              </div>
+              <p class="text-slate-300 mb-4">
+                Développement de jeux 2D/3D avec Unity (C#). Création de modèles 3D avec Blender. Intégration d'assets, physique, animations.
+              </p>
+              <div class="w-full bg-slate-700 rounded-full h-3">
+                <div class="bg-indigo-500 h-3 rounded-full" style="width: 75%"></div>
+              </div>
+              <p class="text-indigo-400 text-sm mt-2">Niveau : Intermédiaire avancé (75%)</p>
+            </div>
+
+            <!-- VirtualBox / Systèmes -->
+            <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-8 border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300">
+              <div class="flex items-start gap-4 mb-4">
+                <div class="text-4xl">🖥️</div>
+                <h3 class="text-2xl font-bold text-indigo-200">VirtualBox / Administration</h3>
+              </div>
+              <p class="text-slate-300 mb-4">
+                Configuration de machines virtuelles, installation systèmes (Windows, Linux), configuration réseau, optimisation performances.
+              </p>
+              <div class="w-full bg-slate-700 rounded-full h-3">
+                <div class="bg-indigo-500 h-3 rounded-full" style="width: 80%"></div>
+              </div>
+              <p class="text-indigo-400 text-sm mt-2">Niveau : Avancé (80%)</p>
+            </div>
+
+            <!-- Frameworks Web -->
+            <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-8 border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300">
+              <div class="flex items-start gap-4 mb-4">
+                <div class="text-4xl">🌐</div>
+                <h3 class="text-2xl font-bold text-indigo-200">Vue.js / Frameworks Web</h3>
+              </div>
+              <p class="text-slate-300 mb-4">
+                Développement d'applications web avec Vue.js 3, Vue Router, Vite. Connaissances HTML5, CSS3, JavaScript moderne (ES6+).
+              </p>
+              <div class="w-full bg-slate-700 rounded-full h-3">
+                <div class="bg-indigo-500 h-3 rounded-full" style="width: 82%"></div>
+              </div>
+              <p class="text-indigo-400 text-sm mt-2">Niveau : Avancé (82%)</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab Content: Langues -->
+        <section v-if="activeTab === 'langues'" class="mb-20">
+          <h2 class="text-3xl font-bold text-white mb-12 text-center">Langues Étrangères</h2>
+          <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Français -->
+            <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-8 border border-indigo-500/30">
+              <div class="flex items-center gap-4 mb-6">
+                <span class="text-5xl">🇫🇷</span>
+                <h3 class="text-3xl font-bold text-indigo-200">Français</h3>
+              </div>
+              <p class="text-slate-300 mb-4 text-lg">Langue maternelle</p>
+              <p class="text-slate-400 text-sm mb-4">Maîtrise complète à l'écrit et à l'oral</p>
+              <div class="w-full bg-slate-700 rounded-full h-4">
+                <div class="bg-indigo-500 h-4 rounded-full" style="width: 100%"></div>
+              </div>
+              <p class="text-indigo-400 text-sm mt-3 font-semibold">Niveau : Natif</p>
+            </div>
+
+            <!-- Anglais -->
+            <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-8 border border-indigo-500/30">
+              <div class="flex items-center gap-4 mb-6">
+                <span class="text-5xl">🇬🇧</span>
+                <h3 class="text-3xl font-bold text-indigo-200">Anglais</h3>
+              </div>
+              <p class="text-slate-300 mb-4 text-lg">Compréhension technique et professionnelle</p>
+              <p class="text-slate-400 text-sm mb-4">Lecture de documentation technique, communication écrite</p>
+              <div class="w-full bg-slate-700 rounded-full h-4">
+                <div class="bg-indigo-500 h-4 rounded-full" style="width: 70%"></div>
+              </div>
+              <p class="text-indigo-400 text-sm mt-3 font-semibold">Niveau : Intermédiaire (B1-B2)</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab Content: Soft Skills -->
+        <section v-if="activeTab === 'softskills'" class="mb-20">
+          <h2 class="text-3xl font-bold text-white mb-12 text-center">Soft Skills & Qualités Comportementales</h2>
           
           <div class="grid md:grid-cols-2 gap-8">
             <!-- Soft Skill 1 -->
             <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-8 border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300">
               <div class="flex items-start gap-4 mb-4">
                 <div class="text-4xl">🤝</div>
-                <h3 class="text-2xl font-bold text-indigo-200">Communication</h3>
+                <h3 class="text-2xl font-bold text-indigo-200">Travail d'Équipe</h3>
               </div>
               <p class="text-slate-300 mb-4">
-                Excellente capacité à communiquer tant à l'écrit qu'à l'oral. Capable d'expliquer des concepts techniques à des non-techniques et de collaborer efficacement en équipe.
+                Excellent collaborateur, capable de travailler efficacement en binôme ou en équipe. Partage des connaissances, écoute active et respect des idées diverses.
               </p>
               <div class="w-full bg-slate-700 rounded-full h-3">
-                <div class="bg-indigo-500 h-3 rounded-full" style="width: 85%"></div>
+                <div class="bg-indigo-500 h-3 rounded-full" style="width: 90%"></div>
               </div>
-              <p class="text-indigo-400 text-sm mt-2">Niveau : Avancé (85%)</p>
+              <p class="text-indigo-400 text-sm mt-2">Niveau : Très Avancé (90%)</p>
             </div>
 
             <!-- Soft Skill 2 -->
@@ -43,22 +206,22 @@
                 <h3 class="text-2xl font-bold text-indigo-200">Résolution de Problèmes</h3>
               </div>
               <p class="text-slate-300 mb-4">
-                Approche analytique et méthodique pour résoudre les problèmes. Capacité à décomposer les problèmes complexes en sous-tâches gérables.
+                Approche analytique et méthodique. Capacité à décomposer les problèmes complexes, identifier les causes racines et proposer des solutions efficaces.
               </p>
               <div class="w-full bg-slate-700 rounded-full h-3">
-                <div class="bg-indigo-500 h-3 rounded-full" style="width: 90%"></div>
+                <div class="bg-indigo-500 h-3 rounded-full" style="width: 92%"></div>
               </div>
-              <p class="text-indigo-400 text-sm mt-2">Niveau : Très Avancé (90%)</p>
+              <p class="text-indigo-400 text-sm mt-2">Niveau : Expert (92%)</p>
             </div>
 
             <!-- Soft Skill 3 -->
             <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-8 border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300">
               <div class="flex items-start gap-4 mb-4">
-                <div class="text-4xl">👥</div>
-                <h3 class="text-2xl font-bold text-indigo-200">Travail d'Équipe</h3>
+                <div class="text-4xl">🚀</div>
+                <h3 class="text-2xl font-bold text-indigo-200">Autonomie & Proactivité</h3>
               </div>
               <p class="text-slate-300 mb-4">
-                Collaboratif et empathique. J'aime travailler en équipe, partager mes connaissances et apprendre des autres. Respectueux des idées diverses.
+                Autonome dans mes projets, capable de prendre des initiatives et de proposer des améliorations. Je n'hésite pas à chercher des solutions de manière proactive.
               </p>
               <div class="w-full bg-slate-700 rounded-full h-3">
                 <div class="bg-indigo-500 h-3 rounded-full" style="width: 88%"></div>
@@ -73,12 +236,12 @@
                 <h3 class="text-2xl font-bold text-indigo-200">Adaptabilité</h3>
               </div>
               <p class="text-slate-300 mb-4">
-                Très adaptable aux changements et aux nouvelles technologies. Apprends rapidement et suis toujours curieux de découvrir de nouveaux outils et frameworks.
+                Très adaptable aux changements technologiques et organisationnels. Apprends rapidement de nouveaux langages, frameworks et méthodologies de travail.
               </p>
               <div class="w-full bg-slate-700 rounded-full h-3">
-                <div class="bg-indigo-500 h-3 rounded-full" style="width: 92%"></div>
+                <div class="bg-indigo-500 h-3 rounded-full" style="width: 91%"></div>
               </div>
-              <p class="text-indigo-400 text-sm mt-2">Niveau : Expert (92%)</p>
+              <p class="text-indigo-400 text-sm mt-2">Niveau : Très Avancé (91%)</p>
             </div>
 
             <!-- Soft Skill 5 -->
@@ -88,7 +251,7 @@
                 <h3 class="text-2xl font-bold text-indigo-200">Rigueur & Organisation</h3>
               </div>
               <p class="text-slate-300 mb-4">
-                Très organisé et rigoureux dans mon travail. Respecte les délais, documente le code et suit les bonnes pratiques de développement.
+                Très organisé et rigoureux. Respect des délais, documentation claire, suivi des bonnes pratiques de développement et conventions de code.
               </p>
               <div class="w-full bg-slate-700 rounded-full h-3">
                 <div class="bg-indigo-500 h-3 rounded-full" style="width: 87%"></div>
@@ -99,11 +262,41 @@
             <!-- Soft Skill 6 -->
             <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-8 border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300">
               <div class="flex items-start gap-4 mb-4">
-                <div class="text-4xl">🚀</div>
-                <h3 class="text-2xl font-bold text-indigo-200">Autonomie & Proactivité</h3>
+                <div class="text-4xl">💬</div>
+                <h3 class="text-2xl font-bold text-indigo-200">Communication</h3>
               </div>
               <p class="text-slate-300 mb-4">
-                Autonome et proactif. Je ne crains pas de prendre l'initiative, de proposer des améliorations et de chercher des solutions innovantes.
+                Bonne capacité de communication, tant à l'écrit qu'à l'oral. Capable d'expliquer des concepts techniques de manière claire et accessible.
+              </p>
+              <div class="w-full bg-slate-700 rounded-full h-3">
+                <div class="bg-indigo-500 h-3 rounded-full" style="width: 83%"></div>
+              </div>
+              <p class="text-indigo-400 text-sm mt-2">Niveau : Avancé (83%)</p>
+            </div>
+
+            <!-- Soft Skill 7 -->
+            <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-8 border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300">
+              <div class="flex items-start gap-4 mb-4">
+                <div class="text-4xl">🌱</div>
+                <h3 class="text-2xl font-bold text-indigo-200">Curiosité & Apprentissage</h3>
+              </div>
+              <p class="text-slate-300 mb-4">
+                Passionné par l'apprentissage continu. Toujours curieux de découvrir de nouvelles technologies, méthodes et bonnes pratiques du développement.
+              </p>
+              <div class="w-full bg-slate-700 rounded-full h-3">
+                <div class="bg-indigo-500 h-3 rounded-full" style="width: 94%"></div>
+              </div>
+              <p class="text-indigo-400 text-sm mt-2">Niveau : Expert (94%)</p>
+            </div>
+
+            <!-- Soft Skill 8 -->
+            <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-8 border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300">
+              <div class="flex items-start gap-4 mb-4">
+                <div class="text-4xl">🤲</div>
+                <h3 class="text-2xl font-bold text-indigo-200">Fiabilité & Engagement</h3>
+              </div>
+              <p class="text-slate-300 mb-4">
+                Fiable et engagé dans mes projets. Je prends mes responsabilités au sérieux et m'assure de la qualité et du respect des engagements pris.
               </p>
               <div class="w-full bg-slate-700 rounded-full h-3">
                 <div class="bg-indigo-500 h-3 rounded-full" style="width: 89%"></div>
@@ -113,87 +306,16 @@
           </div>
         </section>
 
-        <!-- Langues -->
-        <section class="mb-20">
-          <h2 class="text-3xl font-bold text-white mb-12 text-center">Langues</h2>
-          <div class="grid md:grid-cols-3 gap-8">
-            <!-- Français -->
-            <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-8 border border-indigo-500/30">
-              <h3 class="text-2xl font-bold text-indigo-200 mb-4">🇫🇷 Français</h3>
-              <p class="text-slate-300 mb-4">Langue maternelle</p>
-              <div class="w-full bg-slate-700 rounded-full h-3">
-                <div class="bg-indigo-500 h-3 rounded-full" style="width: 100%"></div>
-              </div>
-              <p class="text-indigo-400 text-sm mt-2">Natif</p>
-            </div>
-
-            <!-- Anglais -->
-            <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-8 border border-indigo-500/30">
-              <h3 class="text-2xl font-bold text-indigo-200 mb-4">🇬🇧 Anglais</h3>
-              <p class="text-slate-300 mb-4">Compréhension et communication professionnelle</p>
-              <div class="w-full bg-slate-700 rounded-full h-3">
-                <div class="bg-indigo-500 h-3 rounded-full" style="width: 75%"></div>
-              </div>
-              <p class="text-indigo-400 text-sm mt-2">Intermédiaire avancé</p>
-            </div>
-
-            <!-- Autres langues -->
-            <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-8 border border-indigo-500/30">
-              <h3 class="text-2xl font-bold text-indigo-200 mb-4">🌍 Autres</h3>
-              <p class="text-slate-300 mb-4">Notions d'autres langues</p>
-              <div class="w-full bg-slate-700 rounded-full h-3">
-                <div class="bg-indigo-500 h-3 rounded-full" style="width: 40%"></div>
-              </div>
-              <p class="text-indigo-400 text-sm mt-2">Débutant</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Valeurs personnelles -->
-        <section class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-8 border border-indigo-500/30 mb-20">
-          <h2 class="text-3xl font-bold text-white mb-8 text-center">Mes Valeurs Professionnelles</h2>
-          <div class="grid md:grid-cols-2 gap-6">
-            <div class="flex items-start gap-4">
-              <span class="text-2xl">✨</span>
-              <div>
-                <h4 class="text-xl font-bold text-indigo-200 mb-2">Excellence</h4>
-                <p class="text-slate-300">Je m'efforce toujours de produire un travail de haute qualité et de repousser mes limites.</p>
-              </div>
-            </div>
-            <div class="flex items-start gap-4">
-              <span class="text-2xl">🤲</span>
-              <div>
-                <h4 class="text-xl font-bold text-indigo-200 mb-2">Responsabilité</h4>
-                <p class="text-slate-300">Je prends mes engagements au sérieux et je suis responsable de mon travail et de ses résultats.</p>
-              </div>
-            </div>
-            <div class="flex items-start gap-4">
-              <span class="text-2xl">🌱</span>
-              <div>
-                <h4 class="text-xl font-bold text-indigo-200 mb-2">Apprentissage Continu</h4>
-                <p class="text-slate-300">Je suis passionné par l'apprentissage et le développement professionnel constant.</p>
-              </div>
-            </div>
-            <div class="flex items-start gap-4">
-              <span class="text-2xl">💼</span>
-              <div>
-                <h4 class="text-xl font-bold text-indigo-200 mb-2">Intégrité</h4>
-                <p class="text-slate-300">J'agis avec honnêteté et transparence dans toutes mes relations professionnelles.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <!-- CTA Section -->
-        <section class="text-center py-20">
-          <h2 class="text-3xl font-bold text-white mb-8">Vous me semblez être une bonne correspondance ?</h2>
+        <section class="text-center py-12">
+          <h2 class="text-3xl font-bold text-white mb-8">Intéressé par mon profil ?</h2>
           <div class="flex gap-4 justify-center flex-wrap">
             <router-link to="/" class="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-full transition-all duration-300 hover:scale-105 shadow-lg">
-              À propos de moi
-            </router-link>
-            <a href="#" class="px-8 py-3 border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500/10 font-bold rounded-full transition-all duration-300">
               Me Contacter
-            </a>
+            </router-link>
+            <router-link to="/experiences" class="px-8 py-3 border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500/10 font-bold rounded-full transition-all duration-300">
+              Voir mes expériences
+            </router-link>
           </div>
         </section>
       </main>
