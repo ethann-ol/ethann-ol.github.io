@@ -25,13 +25,13 @@ const isExpanded = (ueId) => {
     <div class="relative z-10">
       <header class="pt-12 pb-8 max-w-6xl mx-auto px-6 flex flex-col items-center">
         <h1 class="text-4xl font-bold text-white mb-2">Mes Compétences</h1>
-        <p class="text-indigo-300 text-lg mb-4">Compétences acquises durant le BUT Informatique — Parcours A (Semestre 5)</p>
+        <p class="text-indigo-300 text-lg mb-4">Compétences acquises durant le BUT Informatique — Parcours A</p>
       </header>
 
       <main class="max-w-6xl mx-auto px-6 py-12">
         <!-- Section Compétences organisée par UE (référentiel PN) -->
         <section class="mb-12">
-          <h2 class="text-3xl font-bold text-white mb-12 text-center">Compétences (UE - Référentiel PN)</h2>
+          <h2 class="text-3xl font-bold text-white mb-12 text-center">Compétences et apprentissages critiques</h2>
 
           <p class="text-slate-300 text-center mb-8">Cliquez sur une carte pour afficher les apprentissages critiques (AC).</p>
 
