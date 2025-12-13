@@ -174,7 +174,7 @@ const setTab = (tab) => {
               <div class="w-full bg-slate-700 rounded-full h-4">
                 <div class="bg-indigo-500 h-4 rounded-full" style="width: 70%"></div>
               </div>
-              <p class="text-indigo-400 text-sm mt-3 font-semibold">Niveau : Intermédiaire (B1-B2)</p>
+              <p class="text-indigo-400 text-sm mt-3 font-semibold">Niveau : Intermédiaire (B2)</p>
             </div>
           </div>
         </section>

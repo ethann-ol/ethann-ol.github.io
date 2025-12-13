@@ -1,10 +1,19 @@
 <script setup>
 import { ref } from 'vue'
 
-const expandedUE = ref(null)
+const expandedUE = ref([])
 
 const toggleUE = (ueId) => {
-  expandedUE.value = expandedUE.value === ueId ? null : ueId
+  const index = expandedUE.value.indexOf(ueId)
+  if (index > -1) {
+    expandedUE.value.splice(index, 1)
+  } else {
+    expandedUE.value.push(ueId)
+  }
+}
+
+const isExpanded = (ueId) => {
+  return expandedUE.value.includes(ueId)
 }
 </script>
 
@@ -28,20 +37,17 @@ const toggleUE = (ueId) => {
 
           <div class="grid grid-cols-1 gap-6">
             <!-- UE 1 - Réaliser -->
-            <div 
-              class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-6 border border-indigo-500/30 cursor-pointer hover:border-indigo-400 transition-all"
-              @click="toggleUE('ue1')"
-            >
-              <div class="flex items-center justify-between">
+            <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-6 border border-indigo-500/30 hover:border-indigo-400 transition-all">
+              <div class="flex items-center justify-between cursor-pointer hover:bg-indigo-500/10 rounded-xl p-2 -m-2 transition-colors" @click="toggleUE('ue1')">
                 <div class="flex-1">
                   <h3 class="text-2xl font-extrabold text-indigo-200 mb-2">Réaliser — Conception & développement</h3>
                   <p class="text-slate-300 text-sm mb-2">Concevoir, coder, tester et intégrer une solution informatique.</p>
                 </div>
-                <div class="text-3xl text-indigo-400 transition-transform" :style="{ transform: expandedUE === 'ue1' ? 'rotate(180deg)' : 'rotate(0deg)' }">
+                <div class="text-3xl text-indigo-400 transition-transform" :style="{ transform: isExpanded('ue1') ? 'rotate(180deg)' : 'rotate(0deg)' }">
                   ▼
                 </div>
               </div>
-              <div v-if="expandedUE === 'ue1'" class="mt-4 pt-4 border-t border-indigo-500/30">
+              <div v-if="isExpanded('ue1')" class="mt-4 pt-4 border-t border-indigo-500/30" @click.stop>
                 <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 1 : Développer des applications informatiques simples</p>
                 <ul class="text-slate-300 text-sm space-y-2">
                   <li class="flex items-center justify-between">
@@ -93,20 +99,17 @@ const toggleUE = (ueId) => {
             </div>
 
             <!-- UE 2 - Optimiser -->
-            <div 
-              class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-6 border border-indigo-500/30 cursor-pointer hover:border-indigo-400 transition-all"
-              @click="toggleUE('ue2')"
-            >
-              <div class="flex items-center justify-between">
+            <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-6 border border-indigo-500/30 hover:border-indigo-400 transition-all">
+              <div class="flex items-center justify-between cursor-pointer hover:bg-indigo-500/10 rounded-xl p-2 -m-2 transition-colors" @click="toggleUE('ue2')">
                 <div class="flex-1">
                   <h3 class="text-2xl font-extrabold text-indigo-200 mb-2">Optimiser — Performance & efficience</h3>
                   <p class="text-slate-300 text-sm mb-2">Optimiser le temps d'exécution et la consommation de ressources.</p>
                 </div>
-                <div class="text-3xl text-indigo-400 transition-transform" :style="{ transform: expandedUE === 'ue2' ? 'rotate(180deg)' : 'rotate(0deg)' }">
+                <div class="text-3xl text-indigo-400 transition-transform" :style="{ transform: isExpanded('ue2') ? 'rotate(180deg)' : 'rotate(0deg)' }">
                   ▼
                 </div>
               </div>
-              <div v-if="expandedUE === 'ue2'" class="mt-4 pt-4 border-t border-indigo-500/30">
+              <div v-if="isExpanded('ue2')" class="mt-4 pt-4 border-t border-indigo-500/30" @click.stop>
                 <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 1 : Appréhender et construire des algorithmes</p>
                 <ul class="text-slate-300 text-sm space-y-2">
                   <li class="flex items-center justify-between">
@@ -145,20 +148,17 @@ const toggleUE = (ueId) => {
             </div>
 
             <!-- UE 3 - Administrer -->
-            <div 
-              class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-6 border border-indigo-500/30 cursor-pointer hover:border-indigo-400 transition-all"
-              @click="toggleUE('ue3')"
-            >
-              <div class="flex items-center justify-between">
+            <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-6 border border-indigo-500/30 hover:border-indigo-400 transition-all">
+              <div class="flex items-center justify-between cursor-pointer hover:bg-indigo-500/10 rounded-xl p-2 -m-2 transition-colors" @click="toggleUE('ue3')">
                 <div class="flex-1">
                   <h3 class="text-2xl font-extrabold text-indigo-200 mb-2">Administrer — Infrastructures & services</h3>
                   <p class="text-slate-300 text-sm mb-2">Installer, configurer et maintenir infrastructures, services et réseaux.</p>
                 </div>
-                <div class="text-3xl text-indigo-400 transition-transform" :style="{ transform: expandedUE === 'ue3' ? 'rotate(180deg)' : 'rotate(0deg)' }">
+                <div class="text-3xl text-indigo-400 transition-transform" :style="{ transform: isExpanded('ue3') ? 'rotate(180deg)' : 'rotate(0deg)' }">
                   ▼
                 </div>
               </div>
-              <div v-if="expandedUE === 'ue3'" class="mt-4 pt-4 border-t border-indigo-500/30">
+              <div v-if="isExpanded('ue3')" class="mt-4 pt-4 border-t border-indigo-500/30" @click.stop>
                 <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 1 : Installer et configurer un poste de travail</p>
                 <ul class="text-slate-300 text-sm space-y-2">
                   <li class="flex items-center justify-between">
@@ -191,20 +191,17 @@ const toggleUE = (ueId) => {
             </div>
 
             <!-- UE 4 - Gérer -->
-            <div 
-              class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-6 border border-indigo-500/30 cursor-pointer hover:border-indigo-400 transition-all"
-              @click="toggleUE('ue4')"
-            >
-              <div class="flex items-center justify-between">
+            <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-6 border border-indigo-500/30 hover:border-indigo-400 transition-all">
+              <div class="flex items-center justify-between cursor-pointer hover:bg-indigo-500/10 rounded-xl p-2 -m-2 transition-colors" @click="toggleUE('ue4')">
                 <div class="flex-1">
                   <h3 class="text-2xl font-extrabold text-indigo-200 mb-2">Gérer — Données & pilotage</h3>
                   <p class="text-slate-300 text-sm mb-2">Concevoir et exploiter les données pour le pilotage de l'entreprise.</p>
                 </div>
-                <div class="text-3xl text-indigo-400 transition-transform" :style="{ transform: expandedUE === 'ue4' ? 'rotate(180deg)' : 'rotate(0deg)' }">
+                <div class="text-3xl text-indigo-400 transition-transform" :style="{ transform: isExpanded('ue4') ? 'rotate(180deg)' : 'rotate(0deg)' }">
                   ▼
                 </div>
               </div>
-              <div v-if="expandedUE === 'ue4'" class="mt-4 pt-4 border-t border-indigo-500/30">
+              <div v-if="isExpanded('ue4')" class="mt-4 pt-4 border-t border-indigo-500/30" @click.stop>
                 <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 1 : Concevoir et mettre en place une base de données à partir d'un cahier des charges client</p>
                 <ul class="text-slate-300 text-sm space-y-2">
                   <li class="flex items-center justify-between">
@@ -234,20 +231,17 @@ const toggleUE = (ueId) => {
             </div>
 
             <!-- UE 5 - Conduire -->
-            <div 
-              class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-6 border border-indigo-500/30 cursor-pointer hover:border-indigo-400 transition-all"
-              @click="toggleUE('ue5')"
-            >
-              <div class="flex items-center justify-between">
+            <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-6 border border-indigo-500/30 hover:border-indigo-400 transition-all">
+              <div class="flex items-center justify-between cursor-pointer hover:bg-indigo-500/10 rounded-xl p-2 -m-2 transition-colors" @click="toggleUE('ue5')">
                 <div class="flex-1">
                   <h3 class="text-2xl font-extrabold text-indigo-200 mb-2">Conduire — Pilotage de projet</h3>
                   <p class="text-slate-300 text-sm mb-2">Organiser et piloter des projets informatiques (classiques ou agiles).</p>
                 </div>
-                <div class="text-3xl text-indigo-400 transition-transform" :style="{ transform: expandedUE === 'ue5' ? 'rotate(180deg)' : 'rotate(0deg)' }">
+                <div class="text-3xl text-indigo-400 transition-transform" :style="{ transform: isExpanded('ue5') ? 'rotate(180deg)' : 'rotate(0deg)' }">
                   ▼
                 </div>
               </div>
-              <div v-if="expandedUE === 'ue5'" class="mt-4 pt-4 border-t border-indigo-500/30">
+              <div v-if="isExpanded('ue5')" class="mt-4 pt-4 border-t border-indigo-500/30" @click.stop>
                 <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 1 : Identifier les besoins métiers des clients et des utilisateurs</p>
                 <ul class="text-slate-300 text-sm space-y-2">
                   <li class="flex items-center justify-between">
@@ -271,20 +265,17 @@ const toggleUE = (ueId) => {
             </div>
 
             <!-- UE 6 - Collaborer -->
-            <div 
-              class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-6 border border-indigo-500/30 cursor-pointer hover:border-indigo-400 transition-all"
-              @click="toggleUE('ue6')"
-            >
-              <div class="flex items-center justify-between">
+            <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-3xl p-6 border border-indigo-500/30 hover:border-indigo-400 transition-all">
+              <div class="flex items-center justify-between cursor-pointer hover:bg-indigo-500/10 rounded-xl p-2 -m-2 transition-colors" @click="toggleUE('ue6')">
                 <div class="flex-1">
                   <h3 class="text-2xl font-extrabold text-indigo-200 mb-2">Collaborer — Travail en équipe</h3>
                   <p class="text-slate-300 text-sm mb-2">Acquérir et mobiliser les aptitudes pour travailler efficacement en équipe.</p>
                 </div>
-                <div class="text-3xl text-indigo-400 transition-transform" :style="{ transform: expandedUE === 'ue6' ? 'rotate(180deg)' : 'rotate(0deg)' }">
+                <div class="text-3xl text-indigo-400 transition-transform" :style="{ transform: isExpanded('ue6') ? 'rotate(180deg)' : 'rotate(0deg)' }">
                   ▼
                 </div>
               </div>
-              <div v-if="expandedUE === 'ue6'" class="mt-4 pt-4 border-t border-indigo-500/30">
+              <div v-if="isExpanded('ue6')" class="mt-4 pt-4 border-t border-indigo-500/30" @click.stop>
                 <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 1 : Identifier ses aptitudes pour travailler dans une équipe</p>
                 <ul class="text-slate-300 text-sm space-y-2">
                   <li>• AC16.01 : Appréhender l'écosystème numérique</li>
@@ -325,37 +316,16 @@ const toggleUE = (ueId) => {
 
         <!-- Section Preuves & Réalisations -->
         <section class="mb-12">
-          <h2 class="text-3xl font-bold text-white mb-8 text-center">Preuves & Réalisations</h2>
-          <div class="grid md:grid-cols-3 gap-6">
-            <div class="group">
-              <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-full w-40 h-40 flex items-center justify-center mx-auto mb-4 shadow-2xl hover:shadow-indigo-500/50 transition-all duration-300 hover:scale-105 cursor-pointer">
-                <div class="text-center">
-                  <div class="text-3xl mb-2">🏆</div>
-                  <p class="text-white font-bold text-sm">Certificats</p>
-                </div>
-              </div>
-              <p class="text-slate-300 text-center text-sm">Diplômes & certifications obtenues</p>
-            </div>
-
-            <div class="group">
+          <h2 class="text-3xl font-bold text-white mb-8 text-center">Mes projets</h2>
+          <div class="flex justify-center">
+            <router-link to="/projects" class="group">
               <div class="bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-full w-40 h-40 flex items-center justify-center mx-auto mb-4 shadow-2xl hover:shadow-indigo-600/50 transition-all duration-300 hover:scale-105 cursor-pointer">
                 <div class="text-center">
                   <div class="text-3xl mb-2">💾</div>
                   <p class="text-white font-bold text-sm">Projets</p>
                 </div>
               </div>
-              <p class="text-slate-300 text-center text-sm">Code source & démonstrations</p>
-            </div>
-
-            <div class="group">
-              <div class="bg-gradient-to-br from-slate-700 to-slate-800 rounded-full w-40 h-40 flex items-center justify-center mx-auto mb-4 shadow-2xl hover:shadow-slate-600/50 transition-all duration-300 hover:scale-105 cursor-pointer">
-                <div class="text-center">
-                  <div class="text-3xl mb-2">📊</div>
-                  <p class="text-white font-bold text-sm">Évaluations</p>
-                </div>
-              </div>
-              <p class="text-slate-300 text-center text-sm">Résultats & retours pédagogiques</p>
-            </div>
+            </router-link>
           </div>
         </section>
 
