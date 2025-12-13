@@ -10,6 +10,8 @@ import ProjectStarbound from './pages/ProjectStarbound.vue'
 import ProjectSavoy from './pages/ProjectSavoy.vue'
 import ProjectHunter from './pages/ProjectHunter.vue'
 import ProjectCaspino from './pages/ProjectCaspino.vue'
+import ProjectMarathon from './pages/ProjectMarathon.vue'
+import ProjectVM from './pages/ProjectVM.vue'
 
 const routes = [
   { path: '/', component: Home, name: 'Home' },
@@ -22,7 +24,9 @@ const routes = [
   { path: '/projects/starbound-legacy', component: ProjectStarbound, name: 'ProjectStarbound' },
   { path: '/projects/savoy-sidesktop', component: ProjectSavoy, name: 'ProjectSavoy' },
   { path: '/projects/hunter', component: ProjectHunter, name: 'ProjectHunter' },
-  { path: '/projects/caspino', component: ProjectCaspino, name: 'ProjectCaspino' }
+  { path: '/projects/caspino', component: ProjectCaspino, name: 'ProjectCaspino' },
+  { path: '/projects/marathon-beaune', component: ProjectMarathon, name: 'ProjectMarathon' },
+  { path: '/projects/vm-developpement', component: ProjectVM, name: 'ProjectVM' }
 ]
 
 const router = createRouter({

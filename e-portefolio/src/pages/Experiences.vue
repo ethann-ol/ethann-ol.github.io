@@ -216,9 +216,9 @@
             <router-link to="/mes-atouts" class="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-full transition-all duration-300 hover:scale-105 shadow-lg">
                 Découvrir mes atouts
               </router-link>
-            <a href="#" class="px-8 py-3 border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500/10 font-bold rounded-full transition-all duration-300">
+            <router-link to="/" class="px-8 py-3 border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500/10 font-bold rounded-full transition-all duration-300">
               Contactez-moi
-            </a>
+            </router-link>
           </div>
         </section>
       </main>

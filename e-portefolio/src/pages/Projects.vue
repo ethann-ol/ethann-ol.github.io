@@ -27,7 +27,7 @@
           <p class="text-indigo-300 text-lg">Choisis un projet pour accéder à la présentation complète, aux livrables et aux apprentissages critiques associés.</p>
         </section>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-2xl p-6 border border-indigo-500/30 hover:border-indigo-400/50 transition-all">
             <p class="text-sm uppercase tracking-[0.2em] text-indigo-300/70 mb-2">SAE — Jeu</p>
             <h2 class="text-2xl font-bold text-white mb-2">StarBound Legacy</h2>
@@ -73,7 +73,9 @@
               <span>→</span>
             </router-link>
           </div>
+        </div>
 
+        <div class="grid md:grid-cols-2 gap-6">
           <div class="bg-gradient-to-r from-amber-500/20 to-slate-700/20 rounded-2xl p-6 border border-amber-500/30 hover:border-amber-400/50 transition-all relative">
             <div class="absolute top-3 right-3 px-2 py-1 bg-amber-500/30 text-amber-200 text-xs font-bold rounded">EN COURS</div>
             <p class="text-sm uppercase tracking-[0.2em] text-amber-300/70 mb-2">SAE S5 — IoT & Mobile</p>
@@ -85,6 +87,36 @@
               <span class="px-3 py-1 bg-amber-500/30 text-amber-200 rounded-full">IoT</span>
             </div>
             <router-link to="/projects/caspino" class="inline-flex items-center gap-2 px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white font-semibold rounded-lg transition-colors">
+              Voir la page
+              <span>→</span>
+            </router-link>
+          </div>
+
+          <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-2xl p-6 border border-indigo-500/30 hover:border-indigo-400/50 transition-all">
+            <p class="text-sm uppercase tracking-[0.2em] text-indigo-300/70 mb-2">TP — Gestion</p>
+            <h2 class="text-2xl font-bold text-white mb-2">Marathon de Beaune</h2>
+            <p class="text-slate-300 mb-4">Application de gestion des inscriptions. WPF/C#, base de données SQL, listes coureurs/courses, système d'inscription.</p>
+            <div class="flex flex-wrap gap-2 mb-4 text-sm">
+              <span class="px-3 py-1 bg-indigo-500/30 text-indigo-200 rounded-full">WPF</span>
+              <span class="px-3 py-1 bg-indigo-500/30 text-indigo-200 rounded-full">C#</span>
+              <span class="px-3 py-1 bg-indigo-500/30 text-indigo-200 rounded-full">SQL</span>
+            </div>
+            <router-link to="/projects/marathon-beaune" class="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition-colors">
+              Voir la page
+              <span>→</span>
+            </router-link>
+          </div>
+
+          <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-2xl p-6 border border-indigo-500/30 hover:border-indigo-400/50 transition-all">
+            <p class="text-sm uppercase tracking-[0.2em] text-indigo-300/70 mb-2">TP — Administration</p>
+            <h2 class="text-2xl font-bold text-white mb-2">VM Développement</h2>
+            <p class="text-slate-300 mb-4">Configuration d'une machine virtuelle optimisée. VirtualBox, installation système, configuration réseau, outils de développement.</p>
+            <div class="flex flex-wrap gap-2 mb-4 text-sm">
+              <span class="px-3 py-1 bg-indigo-500/30 text-indigo-200 rounded-full">VirtualBox</span>
+              <span class="px-3 py-1 bg-indigo-500/30 text-indigo-200 rounded-full">Système</span>
+              <span class="px-3 py-1 bg-indigo-500/30 text-indigo-200 rounded-full">Réseau</span>
+            </div>
+            <router-link to="/projects/vm-developpement" class="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition-colors">
               Voir la page
               <span>→</span>
             </router-link>

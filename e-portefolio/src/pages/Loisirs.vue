@@ -110,12 +110,12 @@
         <section class="text-center py-20">
           <h2 class="text-3xl font-bold text-white mb-8">Discutons de vos projets !</h2>
           <div class="flex gap-4 justify-center flex-wrap">
-            <router-link to="/" class="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-full transition-all duration-300 hover:scale-105 shadow-lg">
-              Retour aux Compétences
+            <router-link to="/competences" class="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-full transition-all duration-300 hover:scale-105 shadow-lg">
+              Voir mes compétences
             </router-link>
-            <a href="#" class="px-8 py-3 border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500/10 font-bold rounded-full transition-all duration-300">
+            <router-link to="/" class="px-8 py-3 border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500/10 font-bold rounded-full transition-all duration-300">
               Me Contacter
-            </a>
+            </router-link>
           </div>
         </section>
       </main>

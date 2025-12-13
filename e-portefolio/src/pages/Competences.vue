@@ -48,11 +48,17 @@ const toggleUE = (ueId) => {
                     <span>• AC11.01 : Implémenter des conceptions simples</span>
                     <router-link to="/projects/starbound-legacy" class="ml-2 px-2 py-1 bg-indigo-600/50 hover:bg-indigo-600 text-indigo-100 text-xs rounded transition-colors">StarBound →</router-link>
                   </li>
-                  <li>• AC11.02 : Élaborer des conceptions simples</li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC11.02 : Élaborer des conceptions simples</span>
+                    <router-link to="/projects/marathon-beaune" class="ml-2 px-2 py-1 bg-indigo-600/50 hover:bg-indigo-600 text-indigo-100 text-xs rounded transition-colors whitespace-nowrap">Marathon →</router-link>
+                  </li>
                   <li>• AC11.03 : Faire des essais et évaluer leurs résultats en regard des spécifications</li>
                   <li class="flex items-center justify-between">
                     <span>• AC11.04 : Développer des interfaces utilisateurs</span>
-                    <router-link to="/projects/starbound-legacy" class="ml-2 px-2 py-1 bg-indigo-600/50 hover:bg-indigo-600 text-indigo-100 text-xs rounded transition-colors">StarBound →</router-link>
+                    <div class="flex gap-1">
+                      <router-link to="/projects/starbound-legacy" class="ml-2 px-2 py-1 bg-indigo-600/50 hover:bg-indigo-600 text-indigo-100 text-xs rounded transition-colors">StarBound →</router-link>
+                      <router-link to="/projects/marathon-beaune" class="px-2 py-1 bg-indigo-600/50 hover:bg-indigo-600 text-indigo-100 text-xs rounded transition-colors whitespace-nowrap">Marathon →</router-link>
+                    </div>
                   </li>
                 </ul>
                 <p class="text-indigo-300 text-lg mb-3 italic font-bold mt-4">Niveau 2 : Partir des exigences et aller jusqu'à une application complète</p>
@@ -115,7 +121,10 @@ const toggleUE = (ueId) => {
                 </ul>
                 <p class="text-indigo-300 text-lg mb-3 italic font-bold mt-4">Niveau 2 : Sélectionner les algorithmes adéquats pour répondre à un problème donné</p>
                 <ul class="text-slate-300 text-sm space-y-2">
-                  <li>• AC22.01 : Choisir des structures de données complexes adaptées au problème</li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC22.01 : Choisir des structures de données complexes adaptées au problème</span>
+                    <router-link to="/projects/marathon-beaune" class="ml-2 px-2 py-1 bg-indigo-600/50 hover:bg-indigo-600 text-indigo-100 text-xs rounded transition-colors whitespace-nowrap">Marathon →</router-link>
+                  </li>
                   <li>• AC22.02 : Utiliser des techniques algorithmiques adaptées pour des problèmes complexes</li>
                   <li class="flex items-center justify-between">
                     <span>• AC22.03 : Comprendre les enjeux et moyens de sécurisation des données et du code</span>
@@ -152,10 +161,19 @@ const toggleUE = (ueId) => {
               <div v-if="expandedUE === 'ue3'" class="mt-4 pt-4 border-t border-indigo-500/30">
                 <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 1 : Installer et configurer un poste de travail</p>
                 <ul class="text-slate-300 text-sm space-y-2">
-                  <li>• AC13.01 : Identifier les différents composants d'un système numérique</li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC13.01 : Identifier les différents composants d'un système numérique</span>
+                    <router-link to="/projects/vm-developpement" class="ml-2 px-2 py-1 bg-indigo-600/50 hover:bg-indigo-600 text-indigo-100 text-xs rounded transition-colors whitespace-nowrap">VM →</router-link>
+                  </li>
                   <li>• AC13.02 : Utiliser les fonctionnalités de base d'un système multiutilisateurs</li>
-                  <li>• AC13.03 : Installer et configurer un système d'exploitation et des outils de développement</li>
-                  <li>• AC13.04 : Configurer un poste de travail dans un réseau d'entreprise</li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC13.03 : Installer et configurer un système d'exploitation et des outils de développement</span>
+                    <router-link to="/projects/vm-developpement" class="ml-2 px-2 py-1 bg-indigo-600/50 hover:bg-indigo-600 text-indigo-100 text-xs rounded transition-colors whitespace-nowrap">VM →</router-link>
+                  </li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC13.04 : Configurer un poste de travail dans un réseau d'entreprise</span>
+                    <router-link to="/projects/vm-developpement" class="ml-2 px-2 py-1 bg-indigo-600/50 hover:bg-indigo-600 text-indigo-100 text-xs rounded transition-colors whitespace-nowrap">VM →</router-link>
+                  </li>
                 </ul>
                 <p class="text-indigo-300 text-lg mb-3 italic font-bold mt-4">Niveau 2 : Déployer des services dans une architecture réseau</p>
                 <ul class="text-slate-300 text-sm space-y-2">
@@ -189,8 +207,14 @@ const toggleUE = (ueId) => {
               <div v-if="expandedUE === 'ue4'" class="mt-4 pt-4 border-t border-indigo-500/30">
                 <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 1 : Concevoir et mettre en place une base de données à partir d'un cahier des charges client</p>
                 <ul class="text-slate-300 text-sm space-y-2">
-                  <li>• AC14.01 : Mettre à jour et interroger une base de données relationnelle</li>
-                  <li>• AC14.02 : Visualiser des données</li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC14.01 : Mettre à jour et interroger une base de données relationnelle</span>
+                    <router-link to="/projects/marathon-beaune" class="ml-2 px-2 py-1 bg-indigo-600/50 hover:bg-indigo-600 text-indigo-100 text-xs rounded transition-colors whitespace-nowrap">Marathon →</router-link>
+                  </li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC14.02 : Visualiser des données</span>
+                    <router-link to="/projects/marathon-beaune" class="ml-2 px-2 py-1 bg-indigo-600/50 hover:bg-indigo-600 text-indigo-100 text-xs rounded transition-colors whitespace-nowrap">Marathon →</router-link>
+                  </li>
                   <li>• AC14.03 : Concevoir une base de données relationnelle à partir d'un cahier des charges</li>
                 </ul>
                 <p class="text-indigo-300 text-lg mb-3 italic font-bold mt-4">Niveau 2 : Optimiser une base de données, interagir avec une application et mettre en œuvre la sécurité</p>
@@ -226,13 +250,19 @@ const toggleUE = (ueId) => {
               <div v-if="expandedUE === 'ue5'" class="mt-4 pt-4 border-t border-indigo-500/30">
                 <p class="text-indigo-300 text-lg mb-3 italic font-bold">Niveau 1 : Identifier les besoins métiers des clients et des utilisateurs</p>
                 <ul class="text-slate-300 text-sm space-y-2">
-                  <li>• AC15.01 : Appréhender les besoins du client et de l'utilisateur</li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC15.01 : Appréhender les besoins du client et de l'utilisateur</span>
+                    <router-link to="/projects/vm-developpement" class="ml-2 px-2 py-1 bg-indigo-600/50 hover:bg-indigo-600 text-indigo-100 text-xs rounded transition-colors whitespace-nowrap">VM →</router-link>
+                  </li>
                   <li>• AC15.02 : Mettre en place les outils de gestion de projet</li>
                   <li>• AC15.03 : Identifier les acteurs et les différentes phases d'un cycle de développement</li>
                 </ul>
                 <p class="text-indigo-300 text-lg mb-3 italic font-bold mt-4">Niveau 2 : Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et des utilisateurs</p>
                 <ul class="text-slate-300 text-sm space-y-2">
-                  <li>• AC25.01 : Identifier les processus présents dans une organisation pour améliorer les SI</li>
+                  <li class="flex items-center justify-between">
+                    <span>• AC25.01 : Identifier les processus présents dans une organisation pour améliorer les SI</span>
+                    <router-link to="/projects/vm-developpement" class="ml-2 px-2 py-1 bg-indigo-600/50 hover:bg-indigo-600 text-indigo-100 text-xs rounded transition-colors whitespace-nowrap">VM →</router-link>
+                  </li>
                   <li>• AC25.02 : Formaliser les besoins du client et de l'utilisateur</li>
                   <li>• AC25.03 : Identifier les critères de faisabilité d'un projet informatique</li>
                   <li>• AC25.04 : Définir et mettre en œuvre une démarche de suivi de projet</li>
@@ -334,7 +364,7 @@ const toggleUE = (ueId) => {
           <h2 class="text-3xl font-bold text-white mb-8">Envie d'en voir plus ?</h2>
           <div class="flex gap-4 justify-center">
             <router-link to="/experiences" class="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-full transition-all duration-300 hover:scale-105 shadow-lg">Voir mes expériences</router-link>
-            <router-link to="/" class="px-8 py-3 border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500/10 font-bold rounded-full transition-all duration-300">Retour</router-link>
+            <router-link to="/" class="px-8 py-3 border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500/10 font-bold rounded-full transition-all duration-300">À propos</router-link>
           </div>
         </section>
 
