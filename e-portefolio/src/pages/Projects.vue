@@ -27,7 +27,7 @@
           <p class="text-indigo-300 text-lg">Choisis un projet pour accéder à la présentation complète, aux livrables et aux apprentissages critiques associés.</p>
         </section>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-2xl p-6 border border-indigo-500/30 hover:border-indigo-400/50 transition-all">
             <p class="text-sm uppercase tracking-[0.2em] text-indigo-300/70 mb-2">SAE — Jeu</p>
             <h2 class="text-2xl font-bold text-white mb-2">StarBound Legacy</h2>
@@ -73,9 +73,7 @@
               <span>→</span>
             </router-link>
           </div>
-        </div>
 
-        <div class="grid md:grid-cols-2 gap-6">
           <div class="bg-gradient-to-r from-amber-500/20 to-slate-700/20 rounded-2xl p-6 border border-amber-500/30 hover:border-amber-400/50 transition-all relative">
             <div class="absolute top-3 right-3 px-2 py-1 bg-amber-500/30 text-amber-200 text-xs font-bold rounded">EN COURS</div>
             <p class="text-sm uppercase tracking-[0.2em] text-amber-300/70 mb-2">SAE S5 — IoT & Mobile</p>

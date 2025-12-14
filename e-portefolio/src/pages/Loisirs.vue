@@ -17,7 +17,7 @@
 
       <main class="max-w-6xl mx-auto px-6 py-20">
         <!-- Section Loisirs avec bulles -->
-        <div class="grid md:grid-cols-2 gap-12 mb-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-20">
           <!-- Loisir 1 -->
           <div class="group">
             <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-3xl h-64 flex items-center justify-center mb-6 shadow-2xl hover:shadow-indigo-500/50 transition-all duration-300 hover:scale-105">
