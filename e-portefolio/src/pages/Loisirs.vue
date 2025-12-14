@@ -28,7 +28,7 @@
             </div>
             <h3 class="text-2xl font-bold text-white mb-2">Jeux Vidéo & Gaming</h3>
             <p class="text-slate-300">
-              Passionné par les jeux vidéo depuis longtemps. Je mets l'accent sur l'expérience de jouer : exploration d'univers, compétition, coopération en ligne et immersion. Le jeu est avant tout un loisir qui me permet de me détendre, d'analyser des mécaniques et d'apprendre des stratégies et des systèmes de gameplay.
+              Passionné par les jeux vidéo depuis longtemps. Je mets l'accent sur l'expérience de jeux : exploration d'univers, compétition, coopération en ligne et immersion. Le jeu est avant tout un loisir qui me permet de me détendre, d'analyser des mécaniques et d'apprendre des stratégies et des systèmes de gameplay.
             </p>
           </div>
 
