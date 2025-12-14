@@ -75,7 +75,7 @@
             </div>
             <div class="bg-slate-800/50 rounded-lg p-6 border border-indigo-500/20">
               <h3 class="text-indigo-300 font-bold text-lg mb-3">🎲 Genre</h3>
-              <p class="text-slate-300 text-sm">Application de jeux d'argent — Machine à sous & jeux de casino</p>
+              <p class="text-slate-300 text-sm">Application de jeux d'argent fictif — Machine à sous & jeux de casino</p>
             </div>
             <div class="bg-slate-800/50 rounded-lg p-6 border border-indigo-500/20">
               <h3 class="text-indigo-300 font-bold text-lg mb-3">🚀 Innovation</h3>
@@ -104,7 +104,7 @@
                 </div>
                 <ul class="text-slate-300 space-y-2 text-sm">
                   <li>• <strong>Kotlin</strong> pour Android</li>
-                  <li>• Interface utilisateur moderne et responsive</li>
+                  <li>• Interface utilisateur moderne et réactive</li>
                   <li>• Communication temps réel avec les serveurs</li>
                   <li>• Gestion des comptes joueurs</li>
                   <li>• Historique des gains et transactions</li>
@@ -117,7 +117,7 @@
                   <h4 class="text-indigo-300 font-bold text-lg">Serveurs Raspberry Pi</h4>
                 </div>
                 <ul class="text-slate-300 space-y-2 text-sm">
-                  <li>• Un Pi par jeu de casino</li>
+                  <li>• Un Raspberry Pi par jeu de casino</li>
                   <li>• Logique métier isolée</li>
                   <li>• Calcul des gains et probabilités</li>
                   <li>• API REST pour communication mobile</li>
