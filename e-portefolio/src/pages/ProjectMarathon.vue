@@ -60,7 +60,7 @@
           <div class="grid md:grid-cols-3 gap-6">
             <div class="bg-slate-800/50 rounded-lg p-6 border border-indigo-500/20">
               <h3 class="text-indigo-300 font-bold text-lg mb-3">🎯 Objectif</h3>
-              <p class="text-slate-300 text-sm">Faciliter la gestion des inscriptions pour l'événement Marathon de Beaune</p>
+              <p class="text-slate-300 text-sm">Faciliter la gestion des inscriptions pour l'événement du Semi-Marathon de Beaune</p>
             </div>
             <div class="bg-slate-800/50 rounded-lg p-6 border border-indigo-500/20">
               <h3 class="text-indigo-300 font-bold text-lg mb-3">📊 Type</h3>
@@ -200,7 +200,7 @@
                 <li class="flex items-start gap-3"><span class="text-indigo-400">▸</span><span>Modèle de données PostgreSQL normalisé</span></li>
                 <li class="flex items-start gap-3"><span class="text-indigo-400">▸</span><span>API REST avec Entity Framework Core</span></li>
                 <li class="flex items-start gap-3"><span class="text-indigo-400">▸</span><span>Requêtes LINQ et migrations automatiques</span></li>
-                <li class="flex items-start gap-3"><span class="text-indigo-400">▸</span><span>Interface WPF responsive et ergonomique</span></li>
+                <li class="flex items-start gap-3"><span class="text-indigo-400">▸</span><span>Interface WPF réactive et ergonomique</span></li>
                 <li class="flex items-start gap-3"><span class="text-indigo-400">▸</span><span>Gestion des erreurs et validations</span></li>
               </ul>
             </div>
