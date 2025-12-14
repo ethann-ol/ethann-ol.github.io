@@ -39,7 +39,7 @@
           <div class="bg-gradient-to-r from-indigo-500/20 to-slate-700/20 rounded-2xl p-6 border border-indigo-500/30 space-y-4 text-slate-300">
             <p><strong class="text-indigo-300">Objectif</strong> : refondre SIDesktop 1.0 en application web unique qui supervise les indicateurs métier et agit de manière proactive (auto-corrections, notifications, reporting).</p>
             <p><strong class="text-indigo-300">Problèmes de l'existant</strong> : ergonomie lourde (multiples fenêtres), déploiement client lourd, navigation difficile, absence de proactivité.</p>
-            <p><strong class="text-indigo-300">Cible</strong> : comptables, contrôleurs de gestion, paie, logistique, commerce, qualité, achats/appro, production, ateliers.</p>
+            <p><strong class="text-indigo-300">Cible</strong> : comptables, contrôleurs de gestion, paie, logistique, commerce, qualité, achats/appro, production.</p>
           </div>
 
           <div class="mt-6">
