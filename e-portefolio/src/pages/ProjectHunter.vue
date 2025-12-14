@@ -76,7 +76,7 @@
               Le joueur dispose de <strong class="text-indigo-300">deux armes distinctes</strong> avec des mécaniques différentes. Le choix stratégique entre rapidité et puissance influence la progression et le scoring.
             </p>
             <p class="text-slate-300 text-lg leading-relaxed">
-              Les monstres spawnnent en vagues progressives, augmentant la <strong class="text-indigo-300">difficulté</strong> au fil du temps.
+              Les monstres apparaissent en vagues progressives, augmentant la <strong class="text-indigo-300">difficulté</strong> au fil du temps.
             </p>
           </div>
 
@@ -103,7 +103,7 @@
           </div>
 
           <div class="bg-slate-800/50 rounded-lg p-6 border border-indigo-500/20">
-            <h3 class="text-indigo-300 font-bold text-lg mb-4">📊 Progression & Scoring</h3>
+            <h3 class="text-indigo-300 font-bold text-lg mb-4">📊 Progression & Classement</h3>
             <ul class="text-slate-300 space-y-3">
               <li class="flex items-start gap-3"><span class="text-indigo-400">▸</span><span>Chaque monstre tué rapporte des points d'expérience</span></li>
               <li class="flex items-start gap-3"><span class="text-indigo-400">▸</span><span>Vagues progressives : difficulté croissante à chaque élimination</span></li>
@@ -153,7 +153,7 @@
                 <li>• Développement de la logique du jeu</li>
                 <li>• Système de combat</li>
                 <li>• Gestion des vagues de monstres</li>
-                <li>• Scoring & progression</li>
+                <li>• Classement & progression</li>
               </ul>
             </div>
 
@@ -219,7 +219,7 @@
             <ul class="text-slate-300 space-y-2">
               <li class="flex items-start gap-3"><span class="text-indigo-400">▸</span><span>Répartition claire des responsabilités entre les trois membres</span></li>
               <li class="flex items-start gap-3"><span class="text-indigo-400">▸</span><span>Communication constante pour assurer la cohésion du jeu</span></li>
-              <li class="flex items-start gap-3"><span class="text-indigo-400">▸</span><span>Intégration seamless de tous les éléments (code, 3D, audio)</span></li>
+              <li class="flex items-start gap-3"><span class="text-indigo-400">▸</span><span>Intégration transparente de tous les éléments (code, 3D, audio)</span></li>
               <li class="flex items-start gap-3"><span class="text-indigo-400">▸</span><span>Démonstration de compétences pluridisciplinaires</span></li>
             </ul>
           </div>
@@ -244,9 +244,9 @@
               <h3 class="text-indigo-300 font-bold text-lg mb-4">✅ Réalisations Techniques</h3>
               <ul class="text-slate-300 space-y-3">
                 <li class="flex items-start gap-3"><span class="text-indigo-400">▸</span><span>Système de combat complet avec deux armes distinctes</span></li>
-                <li class="flex items-start gap-3"><span class="text-indigo-400">▸</span><span>Spawning et gestion des vagues de monstres</span></li>
+                <li class="flex items-start gap-3"><span class="text-indigo-400">▸</span><span>Apparition et gestion des vagues de monstres</span></li>
                 <li class="flex items-start gap-3"><span class="text-indigo-400">▸</span><span>Physique de jeu et collisions</span></li>
-                <li class="flex items-start gap-3"><span class="text-indigo-400">▸</span><span>Système de scoring et progression</span></li>
+                <li class="flex items-start gap-3"><span class="text-indigo-400">▸</span><span>Système de classement et progression</span></li>
               </ul>
             </div>
           </div>
